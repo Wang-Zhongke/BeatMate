@@ -1,0 +1,32 @@
+{
+  "status": "ready",
+  "plan": {
+    "track_id": "melody",
+    "start_bar": 9,
+    "end_bar": 16,
+    "operation": "thin_notes",
+    "value": 50
+  },
+  "scope_source": "resolved_from_text_and_project",
+  "interpretation": "更克制在本轮仅解释为减少melody音符，保持锚点；不保证情绪效果。",
+  "base_version": "fe55e1f50015446b9e9349a043e471c6",
+  "protected_tracks": [
+    "bass",
+    "chords",
+    "hihat",
+    "kick",
+    "snare"
+  ],
+  "project_state": {
+    "track_ids": [
+      "kick",
+      "snare",
+      "hihat",
+      "bass",
+      "chords",
+      "melody"
+    ],
+    "bars": 16,
+    "bpm": 76
+  }
+}

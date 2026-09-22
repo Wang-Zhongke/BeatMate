@@ -1,0 +1,131 @@
+{
+  "raw_text": "伤感但有推动力，带一点不甘，比刚才更有推动力，但不要很吵。给旋律Rap留空间。76 BPM，16小节，A小调，seed 7。",
+  "explicit": {
+    "emotions": [
+      "伤感但有推动力",
+      "带一点不甘"
+    ],
+    "scene": [],
+    "expression": [
+      "伤感但有推动力",
+      "比刚才更有推动力",
+      "给旋律Rap留空间"
+    ],
+    "references": [],
+    "purpose": [
+      "给旋律Rap留空间"
+    ],
+    "prohibitions": [
+      "但不要很吵"
+    ],
+    "other": [
+      "76 BPM",
+      "16小节",
+      "A小调",
+      "seed 7"
+    ]
+  },
+  "constraints": {
+    "bpm": 76,
+    "bars": 16,
+    "seed": 7,
+    "key": "A",
+    "mode": "minor"
+  },
+  "constraint_sources": {
+    "bpm": "76 BPM",
+    "bars": "16小节",
+    "seed": "seed 7",
+    "key": "A小调",
+    "mode": "小调"
+  },
+  "interpretation_rules": [
+    "avoid_loud"
+  ],
+  "assumptions": [
+    {
+      "parameter": "style",
+      "value": "boom_bap",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "swing",
+      "value": 0.12,
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.harmony",
+      "value": "descending",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.chord_style",
+      "value": "arpeggio",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.melody_enabled",
+      "value": true,
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.melody_density",
+      "value": "sparse",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.melody_variation",
+      "value": "moderate",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.drum_density",
+      "value": "moderate",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.drum_velocity",
+      "value": "soft",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.section_variation",
+      "value": "lift",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.bass_presence",
+      "value": "medium",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.vocal_space",
+      "value": "roomy",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    },
+    {
+      "parameter": "arrangement.timbre_hint",
+      "value": "soft_piano",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。参考项目参与选择。"
+    }
+  ],
+  "reference_interpretations": [],
+  "limitations": [
+    "情绪与共鸣需人工试听，不提供共鸣评分。",
+    "音色提示只供制作参考；WAV为现有基础合成器，不是真实吉他或钢琴演奏。",
+    "自由文本证据按有限关键词提取；未识别内容保留在raw_text/other，不声称完整理解。"
+  ]
+}

@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.egg-info/
+.beatmate/
+output/
+.env
+.env.*
+!.env.example
+
+# Local OS metadata and Python build artifacts
+.DS_Store
+*.py[cod]
+build/
+dist/
+.pytest_cache/
+node_modules/
+test-results/
+playwright-report/

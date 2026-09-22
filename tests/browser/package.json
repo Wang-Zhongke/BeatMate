@@ -1,0 +1,6 @@
+{
+  "name": "beatmate-browser-checks",
+  "private": true,
+  "scripts": {"test": "playwright test --config playwright.config.mjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

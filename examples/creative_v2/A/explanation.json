@@ -1,0 +1,110 @@
+{
+  "user_expressed": {
+    "emotions": [
+      "做一个伤感、emo、引人共鸣",
+      "想念一个人"
+    ],
+    "scene": [
+      "凌晨一个人回家"
+    ],
+    "expression": [
+      "做一个伤感、emo、引人共鸣",
+      "给旋律Rap留空间",
+      "克制、留白较多"
+    ],
+    "references": [
+      "XXXTentacion类型的beat"
+    ],
+    "purpose": [
+      "给旋律Rap留空间"
+    ],
+    "prohibitions": [
+      "但不想太压抑",
+      "不要太密"
+    ],
+    "other": [
+      "76 BPM",
+      "16小节",
+      "A小调",
+      "seed 7"
+    ]
+  },
+  "applied_choices": [
+    {
+      "parameter": "harmony",
+      "value": "resolving",
+      "status": "applied",
+      "effect": "调内和声级数 (0, 5, 2, 4)（从0计数），影响和弦、bass和旋律音高。"
+    },
+    {
+      "parameter": "chord_style",
+      "value": "arpeggio",
+      "status": "applied",
+      "effect": "分解和弦逐音进入。"
+    },
+    {
+      "parameter": "melody_enabled",
+      "value": true,
+      "status": "applied",
+      "effect": "生成独立melody轨。"
+    },
+    {
+      "parameter": "melody_density",
+      "value": "sparse",
+      "status": "applied",
+      "effect": "基础每小节3个位置。"
+    },
+    {
+      "parameter": "melody_variation",
+      "value": "low",
+      "status": "applied",
+      "effect": "重复两小节动机，不加额外四小节末变奏。"
+    },
+    {
+      "parameter": "drum_density",
+      "value": "sparse",
+      "status": "applied",
+      "effect": "基础每小节1个kick和4个hihat。"
+    },
+    {
+      "parameter": "drum_velocity",
+      "value": "soft",
+      "status": "applied",
+      "effect": "鼓基础力度68；hihat更轻。"
+    },
+    {
+      "parameter": "section_variation",
+      "value": "steady",
+      "status": "applied",
+      "effect": "各段不附加推动型变奏。"
+    },
+    {
+      "parameter": "bass_presence",
+      "value": "low",
+      "status": "applied",
+      "effect": "每小节1个较短较轻bass音。"
+    },
+    {
+      "parameter": "vocal_space",
+      "value": "roomy",
+      "status": "applied",
+      "effect": "移除旋律最后一拍位置；和弦缩短或减少末拍分解音，给人声留时隙。"
+    },
+    {
+      "parameter": "timbre_hint",
+      "value": "soft_piano",
+      "status": "advice_only",
+      "effect": "仅为制作建议，参考WAV仍使用基础合成器，不还原该乐器。"
+    }
+  ],
+  "actual_note_counts": {
+    "kick": 16,
+    "snare": 32,
+    "hihat": 64,
+    "bass": 16,
+    "chords": 48,
+    "melody": 32
+  },
+  "scoped_edits": [],
+  "note": "说明来自保存规格及实际音符；局部编辑见scoped_edits。未进行人工听感确认，不保证伤感或共鸣。"
+}

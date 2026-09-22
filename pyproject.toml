@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools==75.6.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beatmate"
+version = "0.1.0"
+description = "Local-first hip-hop music creation workspace with audio, stems and MIDI export"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dependencies = ["mido==1.3.3", "packaging==24.2"]
+
+[project.scripts]
+beatmate = "beatmate.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["beatmate*"]
+
+[tool.setuptools.package-data]
+beatmate = ["audio.html", "ui/*.css", "ui/*.js", "ui/*.png"]

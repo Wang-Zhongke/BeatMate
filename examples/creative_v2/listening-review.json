@@ -1,0 +1,26 @@
+{
+  "status": "PENDING_HUMAN_REVIEW",
+  "reviewer": null,
+  "date": null,
+  "cases": {
+    "A": {
+      "emotion_match": null,
+      "rap_space": null,
+      "musical_quality": null,
+      "comments": null
+    },
+    "B": {
+      "emotion_match": null,
+      "rap_space": null,
+      "musical_quality": null,
+      "comments": null
+    },
+    "C": {
+      "emotion_match": null,
+      "rap_space": null,
+      "musical_quality": null,
+      "comments": null
+    }
+  },
+  "instruction": "请人工试听A/B/C，描述情绪匹配、是否好听、是否适合录Rap及修改偏好；没有自动共鸣评分。"
+}

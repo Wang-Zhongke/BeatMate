@@ -1,0 +1,105 @@
+{
+  "user_expressed": {
+    "emotions": [
+      "伤感但有推动力",
+      "带一点不甘"
+    ],
+    "scene": [],
+    "expression": [
+      "伤感但有推动力",
+      "比刚才更有推动力",
+      "给旋律Rap留空间"
+    ],
+    "references": [],
+    "purpose": [
+      "给旋律Rap留空间"
+    ],
+    "prohibitions": [
+      "但不要很吵"
+    ],
+    "other": [
+      "76 BPM",
+      "16小节",
+      "A小调",
+      "seed 7"
+    ]
+  },
+  "applied_choices": [
+    {
+      "parameter": "harmony",
+      "value": "descending",
+      "status": "applied",
+      "effect": "调内和声级数 (0, 6, 5, 6)（从0计数），影响和弦、bass和旋律音高。"
+    },
+    {
+      "parameter": "chord_style",
+      "value": "arpeggio",
+      "status": "applied",
+      "effect": "分解和弦逐音进入。"
+    },
+    {
+      "parameter": "melody_enabled",
+      "value": true,
+      "status": "applied",
+      "effect": "生成独立melody轨。"
+    },
+    {
+      "parameter": "melody_density",
+      "value": "sparse",
+      "status": "applied",
+      "effect": "基础每小节3个位置。"
+    },
+    {
+      "parameter": "melody_variation",
+      "value": "moderate",
+      "status": "applied",
+      "effect": "四小节末改变部分动机音高。"
+    },
+    {
+      "parameter": "drum_density",
+      "value": "moderate",
+      "status": "applied",
+      "effect": "基础每小节3个kick和8个hihat。"
+    },
+    {
+      "parameter": "drum_velocity",
+      "value": "soft",
+      "status": "applied",
+      "effect": "鼓基础力度68；hihat更轻。"
+    },
+    {
+      "parameter": "section_variation",
+      "value": "lift",
+      "status": "applied",
+      "effect": "每隔四小节增添kick、提高鼓力度并变化句末旋律；乐句末加snare。"
+    },
+    {
+      "parameter": "bass_presence",
+      "value": "medium",
+      "status": "applied",
+      "effect": "每小节2个更长、力度更高的bass音。"
+    },
+    {
+      "parameter": "vocal_space",
+      "value": "roomy",
+      "status": "applied",
+      "effect": "移除旋律最后一拍位置；和弦缩短或减少末拍分解音，给人声留时隙。"
+    },
+    {
+      "parameter": "timbre_hint",
+      "value": "soft_piano",
+      "status": "advice_only",
+      "effect": "仅为制作建议，参考WAV仍使用基础合成器，不还原该乐器。"
+    }
+  ],
+  "actual_note_counts": {
+    "kick": 56,
+    "snare": 34,
+    "hihat": 128,
+    "bass": 32,
+    "chords": 48,
+    "melody": 32
+  },
+  "scoped_edits": [],
+  "note": "说明来自保存规格及实际音符；局部编辑见scoped_edits。未进行人工听感确认，不保证伤感或共鸣。"
+}

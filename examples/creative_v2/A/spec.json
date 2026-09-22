@@ -1,0 +1,22 @@
+{
+  "style": "boom_bap",
+  "bpm": 76,
+  "bars": 16,
+  "key": "A",
+  "mode": "minor",
+  "swing": 0.12,
+  "seed": 7,
+  "arrangement": {
+    "harmony": "resolving",
+    "chord_style": "arpeggio",
+    "melody_enabled": true,
+    "melody_density": "sparse",
+    "melody_variation": "low",
+    "drum_density": "sparse",
+    "drum_velocity": "soft",
+    "section_variation": "steady",
+    "bass_presence": "low",
+    "vocal_space": "roomy",
+    "timbre_hint": "soft_piano"
+  }
+}

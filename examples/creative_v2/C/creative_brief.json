@@ -1,0 +1,148 @@
+{
+  "raw_text": "做一个伤感、emo、引人共鸣，XXXTentacion类型的beat。凌晨一个人回家，想念一个人，但不想太压抑，给旋律Rap留空间。克制、留白较多，不要太密。76 BPM，16小节，A小调，seed 7。",
+  "explicit": {
+    "emotions": [
+      "做一个伤感、emo、引人共鸣",
+      "想念一个人"
+    ],
+    "scene": [
+      "凌晨一个人回家"
+    ],
+    "expression": [
+      "做一个伤感、emo、引人共鸣",
+      "给旋律Rap留空间",
+      "克制、留白较多"
+    ],
+    "references": [
+      "XXXTentacion类型的beat"
+    ],
+    "purpose": [
+      "给旋律Rap留空间"
+    ],
+    "prohibitions": [
+      "但不想太压抑",
+      "不要太密"
+    ],
+    "other": [
+      "76 BPM",
+      "16小节",
+      "A小调",
+      "seed 7"
+    ]
+  },
+  "constraints": {
+    "bpm": 76,
+    "bars": 16,
+    "seed": 7,
+    "key": "A",
+    "mode": "minor"
+  },
+  "constraint_sources": {
+    "bpm": "76 BPM",
+    "bars": "16小节",
+    "seed": "seed 7",
+    "key": "A小调",
+    "mode": "小调"
+  },
+  "interpretation_rules": [
+    "avoid_dense",
+    "avoid_oppressive"
+  ],
+  "assumptions": [
+    {
+      "parameter": "style",
+      "value": "boom_bap",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "swing",
+      "value": 0.12,
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.harmony",
+      "value": "resolving",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.chord_style",
+      "value": "arpeggio",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.melody_enabled",
+      "value": true,
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.melody_density",
+      "value": "sparse",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.melody_variation",
+      "value": "low",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.drum_density",
+      "value": "sparse",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.drum_velocity",
+      "value": "soft",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.section_variation",
+      "value": "steady",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.bass_presence",
+      "value": "low",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.vocal_space",
+      "value": "roomy",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    },
+    {
+      "parameter": "arrangement.timbre_hint",
+      "value": "soft_piano",
+      "source": "system_inference",
+      "reason": "系统选择；不是用户明确指定。"
+    }
+  ],
+  "reference_interpretations": [
+    {
+      "reference_quote": "XXXTentacion类型的beat",
+      "source": "system_inference",
+      "features": [
+        "sparse旋律密度",
+        "roomy人声空间",
+        "arpeggio和弦演奏"
+      ],
+      "limitation": "这是本次可解释的创作选择，不是艺人固定模板；不引用歌曲旋律、歌词或采样。"
+    }
+  ],
+  "limitations": [
+    "情绪与共鸣需人工试听，不提供共鸣评分。",
+    "音色提示只供制作参考；WAV为现有基础合成器，不是真实吉他或钢琴演奏。",
+    "自由文本证据按有限关键词提取；未识别内容保留在raw_text/other，不声称完整理解。"
+  ]
+}

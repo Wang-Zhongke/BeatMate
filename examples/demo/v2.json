@@ -1,0 +1,1438 @@
+{
+  "schema_version": 1,
+  "project_id": "45749b06a69d43a5a94abf9599ee0593",
+  "version_id": "615d4b739bee4a68ab6a26be6f0a692a",
+  "parent_id": "46eba76f2d944fa590502e390433f707",
+  "created_at": "2026-09-16T01:21:29.080778+00:00",
+  "spec": {
+    "style": "boom_bap",
+    "bpm": 90,
+    "bars": 8,
+    "key": "C",
+    "mode": "minor",
+    "swing": 0.12,
+    "seed": 7
+  },
+  "tracks": [
+    {
+      "id": "kick",
+      "name": "kick",
+      "channel": 9,
+      "program": 0,
+      "notes": [
+        {
+          "id": "ff7c30c7a005e908511529b7",
+          "pitch": 36,
+          "start_tick": 0,
+          "duration_tick": 90,
+          "velocity": 96
+        },
+        {
+          "id": "46ede376d209983d00ab9c4c",
+          "pitch": 36,
+          "start_tick": 720,
+          "duration_tick": 90,
+          "velocity": 108
+        },
+        {
+          "id": "d7e0373e7dca859ee7d63487",
+          "pitch": 36,
+          "start_tick": 1200,
+          "duration_tick": 90,
+          "velocity": 106
+        },
+        {
+          "id": "672a3eb66cdb7cadbe60b079",
+          "pitch": 36,
+          "start_tick": 1920,
+          "duration_tick": 90,
+          "velocity": 97
+        },
+        {
+          "id": "550f4449512c312a78db0ab0",
+          "pitch": 36,
+          "start_tick": 2640,
+          "duration_tick": 90,
+          "velocity": 96
+        },
+        {
+          "id": "4ee9354f572ca86fa8c1f482",
+          "pitch": 36,
+          "start_tick": 3120,
+          "duration_tick": 90,
+          "velocity": 99
+        },
+        {
+          "id": "097456354d8c540b4bd9ede0",
+          "pitch": 36,
+          "start_tick": 3840,
+          "duration_tick": 90,
+          "velocity": 103
+        },
+        {
+          "id": "03d9dbebe2c3b719cac37c9f",
+          "pitch": 36,
+          "start_tick": 4560,
+          "duration_tick": 90,
+          "velocity": 100
+        },
+        {
+          "id": "7937c3575511c7b929207b01",
+          "pitch": 36,
+          "start_tick": 5040,
+          "duration_tick": 90,
+          "velocity": 113
+        },
+        {
+          "id": "f0edf8d8fa1ab28ab48cd837",
+          "pitch": 36,
+          "start_tick": 5760,
+          "duration_tick": 90,
+          "velocity": 106
+        },
+        {
+          "id": "42d884bb82d6b04af43c086d",
+          "pitch": 36,
+          "start_tick": 6480,
+          "duration_tick": 90,
+          "velocity": 99
+        },
+        {
+          "id": "1755b3d2f330cf247db80975",
+          "pitch": 36,
+          "start_tick": 6960,
+          "duration_tick": 90,
+          "velocity": 96
+        },
+        {
+          "id": "6134f175748b11d8b32f3556",
+          "pitch": 36,
+          "start_tick": 7680,
+          "duration_tick": 90,
+          "velocity": 108
+        },
+        {
+          "id": "fed622a60911c6324b018d2e",
+          "pitch": 36,
+          "start_tick": 8400,
+          "duration_tick": 90,
+          "velocity": 100
+        },
+        {
+          "id": "e1b9f75ede448790f4805efb",
+          "pitch": 36,
+          "start_tick": 8880,
+          "duration_tick": 90,
+          "velocity": 110
+        },
+        {
+          "id": "48940911db8498eaed36d632",
+          "pitch": 36,
+          "start_tick": 9600,
+          "duration_tick": 90,
+          "velocity": 115
+        },
+        {
+          "id": "0f440b283b6c6f05ce5687e6",
+          "pitch": 36,
+          "start_tick": 10320,
+          "duration_tick": 90,
+          "velocity": 95
+        },
+        {
+          "id": "57a1f2296c25e9dded5f592b",
+          "pitch": 36,
+          "start_tick": 10800,
+          "duration_tick": 90,
+          "velocity": 110
+        },
+        {
+          "id": "5f9df99e587daf9276771b93",
+          "pitch": 36,
+          "start_tick": 11520,
+          "duration_tick": 90,
+          "velocity": 114
+        },
+        {
+          "id": "53362ad62ffea080079b7044",
+          "pitch": 36,
+          "start_tick": 12240,
+          "duration_tick": 90,
+          "velocity": 105
+        },
+        {
+          "id": "5444d974bbab3723d52c854b",
+          "pitch": 36,
+          "start_tick": 12720,
+          "duration_tick": 90,
+          "velocity": 103
+        },
+        {
+          "id": "b37218ee94597b0bfa595d17",
+          "pitch": 36,
+          "start_tick": 13440,
+          "duration_tick": 90,
+          "velocity": 95
+        },
+        {
+          "id": "fdfd06ea3b9f4c503f91c638",
+          "pitch": 36,
+          "start_tick": 14160,
+          "duration_tick": 90,
+          "velocity": 106
+        },
+        {
+          "id": "ccaa7d21900505c23e61d1e0",
+          "pitch": 36,
+          "start_tick": 14640,
+          "duration_tick": 90,
+          "velocity": 98
+        }
+      ]
+    },
+    {
+      "id": "snare",
+      "name": "snare",
+      "channel": 9,
+      "program": 0,
+      "notes": [
+        {
+          "id": "33907c450c54bb7e7b7db8a1",
+          "pitch": 38,
+          "start_tick": 480,
+          "duration_tick": 90,
+          "velocity": 111
+        },
+        {
+          "id": "3a450c5488a6c8162a62726f",
+          "pitch": 38,
+          "start_tick": 1440,
+          "duration_tick": 90,
+          "velocity": 104
+        },
+        {
+          "id": "df4fa3a2116a98a72d4b084e",
+          "pitch": 38,
+          "start_tick": 2400,
+          "duration_tick": 90,
+          "velocity": 104
+        },
+        {
+          "id": "242cb67c83e82b137a97cff7",
+          "pitch": 38,
+          "start_tick": 3360,
+          "duration_tick": 90,
+          "velocity": 107
+        },
+        {
+          "id": "27989c93a92a408af335ae8a",
+          "pitch": 38,
+          "start_tick": 4320,
+          "duration_tick": 90,
+          "velocity": 104
+        },
+        {
+          "id": "eaceecab8cfb1a42cba55ba1",
+          "pitch": 38,
+          "start_tick": 5280,
+          "duration_tick": 90,
+          "velocity": 103
+        },
+        {
+          "id": "664f302c77f388eaf6fe3df0",
+          "pitch": 38,
+          "start_tick": 6240,
+          "duration_tick": 90,
+          "velocity": 100
+        },
+        {
+          "id": "948218f0cebe9de8975614d9",
+          "pitch": 38,
+          "start_tick": 7200,
+          "duration_tick": 90,
+          "velocity": 97
+        },
+        {
+          "id": "f81e407b7be1d9aa87d29afd",
+          "pitch": 38,
+          "start_tick": 8160,
+          "duration_tick": 90,
+          "velocity": 112
+        },
+        {
+          "id": "3602dbece93aa97da700e19c",
+          "pitch": 38,
+          "start_tick": 9120,
+          "duration_tick": 90,
+          "velocity": 103
+        },
+        {
+          "id": "93e2d6ef0dcf5dd5dc444c9e",
+          "pitch": 38,
+          "start_tick": 10080,
+          "duration_tick": 90,
+          "velocity": 96
+        },
+        {
+          "id": "ac98c281dea0ec8db959a26a",
+          "pitch": 38,
+          "start_tick": 11040,
+          "duration_tick": 90,
+          "velocity": 109
+        },
+        {
+          "id": "583137ccad077684c5f94de1",
+          "pitch": 38,
+          "start_tick": 12000,
+          "duration_tick": 90,
+          "velocity": 110
+        },
+        {
+          "id": "3b04523028a33a3e680e30ef",
+          "pitch": 38,
+          "start_tick": 12960,
+          "duration_tick": 90,
+          "velocity": 107
+        },
+        {
+          "id": "e3d798518d95c7da39f414a4",
+          "pitch": 38,
+          "start_tick": 13920,
+          "duration_tick": 90,
+          "velocity": 113
+        },
+        {
+          "id": "3d4e9d4d351cd07b3031d870",
+          "pitch": 38,
+          "start_tick": 14880,
+          "duration_tick": 90,
+          "velocity": 112
+        }
+      ]
+    },
+    {
+      "id": "hihat",
+      "name": "hihat",
+      "channel": 9,
+      "program": 0,
+      "notes": [
+        {
+          "id": "dd2c97a3f31dbe9dde5465e5",
+          "pitch": 42,
+          "start_tick": 0,
+          "duration_tick": 60,
+          "velocity": 67
+        },
+        {
+          "id": "d252202ffc36afcba6197e5e",
+          "pitch": 42,
+          "start_tick": 269,
+          "duration_tick": 60,
+          "velocity": 77
+        },
+        {
+          "id": "4863c875556839dbdfb8980d",
+          "pitch": 42,
+          "start_tick": 480,
+          "duration_tick": 60,
+          "velocity": 79
+        },
+        {
+          "id": "c854beb89c87481c009a9c84",
+          "pitch": 42,
+          "start_tick": 749,
+          "duration_tick": 60,
+          "velocity": 80
+        },
+        {
+          "id": "05aab8474a16ff0fcd85777b",
+          "pitch": 42,
+          "start_tick": 960,
+          "duration_tick": 60,
+          "velocity": 83
+        },
+        {
+          "id": "00b94448898b6bf931af25aa",
+          "pitch": 42,
+          "start_tick": 1229,
+          "duration_tick": 60,
+          "velocity": 60
+        },
+        {
+          "id": "eabce4ce3eb0a096a5cab1e2",
+          "pitch": 42,
+          "start_tick": 1440,
+          "duration_tick": 60,
+          "velocity": 87
+        },
+        {
+          "id": "886d0d79e7b94c376723589a",
+          "pitch": 42,
+          "start_tick": 1709,
+          "duration_tick": 60,
+          "velocity": 71
+        },
+        {
+          "id": "f99d01449ebf1fd59a2dcb25",
+          "pitch": 42,
+          "start_tick": 1920,
+          "duration_tick": 60,
+          "velocity": 73
+        },
+        {
+          "id": "da8571e4f7e3ab52e0bd724f",
+          "pitch": 42,
+          "start_tick": 2189,
+          "duration_tick": 60,
+          "velocity": 74
+        },
+        {
+          "id": "82dd2a2f3219a61248dd8bd3",
+          "pitch": 42,
+          "start_tick": 2400,
+          "duration_tick": 60,
+          "velocity": 77
+        },
+        {
+          "id": "213df3264e57908a9b5a17f5",
+          "pitch": 42,
+          "start_tick": 2669,
+          "duration_tick": 60,
+          "velocity": 67
+        },
+        {
+          "id": "0f46eab1132e5e0154553296",
+          "pitch": 42,
+          "start_tick": 2880,
+          "duration_tick": 60,
+          "velocity": 76
+        },
+        {
+          "id": "411e60eb2b310b4c55ab401b",
+          "pitch": 42,
+          "start_tick": 3149,
+          "duration_tick": 60,
+          "velocity": 61
+        },
+        {
+          "id": "9f2caf29f92dc44e3a0948a7",
+          "pitch": 42,
+          "start_tick": 3360,
+          "duration_tick": 60,
+          "velocity": 73
+        },
+        {
+          "id": "0090fade6092976b35e482d1",
+          "pitch": 42,
+          "start_tick": 3629,
+          "duration_tick": 60,
+          "velocity": 72
+        },
+        {
+          "id": "a94cabcde452242a7102f67d",
+          "pitch": 42,
+          "start_tick": 3840,
+          "duration_tick": 30,
+          "velocity": 87
+        },
+        {
+          "id": "28d933b6f0fe37dff411a21a",
+          "pitch": 42,
+          "start_tick": 3907,
+          "duration_tick": 30,
+          "velocity": 73
+        },
+        {
+          "id": "fb88ecc08d89ff68b68c08e6",
+          "pitch": 42,
+          "start_tick": 3960,
+          "duration_tick": 30,
+          "velocity": 64
+        },
+        {
+          "id": "f8d2c624ccd7ee5ad3c25026",
+          "pitch": 42,
+          "start_tick": 4027,
+          "duration_tick": 30,
+          "velocity": 85
+        },
+        {
+          "id": "cc7db8361d398697eb88f40b",
+          "pitch": 42,
+          "start_tick": 4080,
+          "duration_tick": 30,
+          "velocity": 79
+        },
+        {
+          "id": "8ca18dce6d3039b3205872aa",
+          "pitch": 42,
+          "start_tick": 4147,
+          "duration_tick": 30,
+          "velocity": 59
+        },
+        {
+          "id": "565acc43494c6b99c2fd9d6c",
+          "pitch": 42,
+          "start_tick": 4200,
+          "duration_tick": 30,
+          "velocity": 67
+        },
+        {
+          "id": "93ec1bd0f469e74849d0defb",
+          "pitch": 42,
+          "start_tick": 4267,
+          "duration_tick": 30,
+          "velocity": 58
+        },
+        {
+          "id": "59dc7649f0fcda9758d9dd6d",
+          "pitch": 42,
+          "start_tick": 4320,
+          "duration_tick": 30,
+          "velocity": 73
+        },
+        {
+          "id": "9dd65096c730e83582f992c5",
+          "pitch": 42,
+          "start_tick": 4387,
+          "duration_tick": 30,
+          "velocity": 87
+        },
+        {
+          "id": "6b340c78654c5e0d1229faaa",
+          "pitch": 42,
+          "start_tick": 4440,
+          "duration_tick": 30,
+          "velocity": 77
+        },
+        {
+          "id": "d47edb7b4f6ad31bd27726e4",
+          "pitch": 42,
+          "start_tick": 4507,
+          "duration_tick": 30,
+          "velocity": 65
+        },
+        {
+          "id": "4549bceb92eda6b4cc1783fe",
+          "pitch": 42,
+          "start_tick": 4560,
+          "duration_tick": 30,
+          "velocity": 81
+        },
+        {
+          "id": "f7bad306879d01234c6f3eb5",
+          "pitch": 42,
+          "start_tick": 4627,
+          "duration_tick": 30,
+          "velocity": 83
+        },
+        {
+          "id": "5518968392cb286342879caa",
+          "pitch": 42,
+          "start_tick": 4680,
+          "duration_tick": 30,
+          "velocity": 83
+        },
+        {
+          "id": "838c52357ea445d8dfae3329",
+          "pitch": 42,
+          "start_tick": 4747,
+          "duration_tick": 30,
+          "velocity": 64
+        },
+        {
+          "id": "9d40aad9a04f1aca2cb33686",
+          "pitch": 42,
+          "start_tick": 4800,
+          "duration_tick": 30,
+          "velocity": 85
+        },
+        {
+          "id": "9c0cb86d73807daf38d348de",
+          "pitch": 42,
+          "start_tick": 4867,
+          "duration_tick": 30,
+          "velocity": 68
+        },
+        {
+          "id": "53d22559973867f377b8d477",
+          "pitch": 42,
+          "start_tick": 4920,
+          "duration_tick": 30,
+          "velocity": 64
+        },
+        {
+          "id": "c9afa79d5924403210ef927b",
+          "pitch": 42,
+          "start_tick": 4987,
+          "duration_tick": 30,
+          "velocity": 82
+        },
+        {
+          "id": "1acd36ce4369d946ab82efc4",
+          "pitch": 42,
+          "start_tick": 5040,
+          "duration_tick": 30,
+          "velocity": 86
+        },
+        {
+          "id": "6e8bca9ab81ebab63aa44a56",
+          "pitch": 42,
+          "start_tick": 5107,
+          "duration_tick": 30,
+          "velocity": 87
+        },
+        {
+          "id": "5cc94933ac3d6f9cb76a3d7f",
+          "pitch": 42,
+          "start_tick": 5160,
+          "duration_tick": 30,
+          "velocity": 84
+        },
+        {
+          "id": "01dcacdbafc53c62d3950dac",
+          "pitch": 42,
+          "start_tick": 5227,
+          "duration_tick": 30,
+          "velocity": 84
+        },
+        {
+          "id": "e89d056d23d9a029c425b4d1",
+          "pitch": 42,
+          "start_tick": 5280,
+          "duration_tick": 30,
+          "velocity": 84
+        },
+        {
+          "id": "3c389093a365c1044905d75e",
+          "pitch": 42,
+          "start_tick": 5347,
+          "duration_tick": 30,
+          "velocity": 67
+        },
+        {
+          "id": "34c1bf57855a2761a4cb79dc",
+          "pitch": 42,
+          "start_tick": 5400,
+          "duration_tick": 30,
+          "velocity": 75
+        },
+        {
+          "id": "8e094ef5b3298ad60cb82fbf",
+          "pitch": 42,
+          "start_tick": 5467,
+          "duration_tick": 30,
+          "velocity": 86
+        },
+        {
+          "id": "2fdc647a6eee56d429fe7c0f",
+          "pitch": 42,
+          "start_tick": 5520,
+          "duration_tick": 30,
+          "velocity": 78
+        },
+        {
+          "id": "4a8c0665c4cff2d801f2e242",
+          "pitch": 42,
+          "start_tick": 5587,
+          "duration_tick": 30,
+          "velocity": 66
+        },
+        {
+          "id": "3807043f313559123c4cd4b5",
+          "pitch": 42,
+          "start_tick": 5640,
+          "duration_tick": 30,
+          "velocity": 77
+        },
+        {
+          "id": "4541d8520b311ef4bc84cc40",
+          "pitch": 42,
+          "start_tick": 5707,
+          "duration_tick": 30,
+          "velocity": 80
+        },
+        {
+          "id": "b61e017955f84b5c31f04438",
+          "pitch": 42,
+          "start_tick": 5760,
+          "duration_tick": 30,
+          "velocity": 81
+        },
+        {
+          "id": "dd3779f8462eda9cb0bf7179",
+          "pitch": 42,
+          "start_tick": 5827,
+          "duration_tick": 30,
+          "velocity": 74
+        },
+        {
+          "id": "e8a0415ff71abf91168e770f",
+          "pitch": 42,
+          "start_tick": 5880,
+          "duration_tick": 30,
+          "velocity": 66
+        },
+        {
+          "id": "6bc21286299b3b1b34e2d885",
+          "pitch": 42,
+          "start_tick": 5947,
+          "duration_tick": 30,
+          "velocity": 65
+        },
+        {
+          "id": "f70e9f48be824ae5e1f43b55",
+          "pitch": 42,
+          "start_tick": 6000,
+          "duration_tick": 30,
+          "velocity": 67
+        },
+        {
+          "id": "ff38b276afca0ae419be1d75",
+          "pitch": 42,
+          "start_tick": 6067,
+          "duration_tick": 30,
+          "velocity": 74
+        },
+        {
+          "id": "c4e179e0efdaf49dbdc6b81d",
+          "pitch": 42,
+          "start_tick": 6120,
+          "duration_tick": 30,
+          "velocity": 65
+        },
+        {
+          "id": "4492465bf2f3e42b2c13611f",
+          "pitch": 42,
+          "start_tick": 6187,
+          "duration_tick": 30,
+          "velocity": 76
+        },
+        {
+          "id": "adaff29437c606646a3f981b",
+          "pitch": 42,
+          "start_tick": 6240,
+          "duration_tick": 30,
+          "velocity": 85
+        },
+        {
+          "id": "e37d4281c07c434c743586e7",
+          "pitch": 42,
+          "start_tick": 6307,
+          "duration_tick": 30,
+          "velocity": 82
+        },
+        {
+          "id": "0d8eacd1d8b6bca5a27b6501",
+          "pitch": 42,
+          "start_tick": 6360,
+          "duration_tick": 30,
+          "velocity": 84
+        },
+        {
+          "id": "9226fdce3e4ac8fd595cee8c",
+          "pitch": 42,
+          "start_tick": 6427,
+          "duration_tick": 30,
+          "velocity": 63
+        },
+        {
+          "id": "d9c527e6dd276fffdcc2a384",
+          "pitch": 42,
+          "start_tick": 6480,
+          "duration_tick": 30,
+          "velocity": 59
+        },
+        {
+          "id": "2b210dd8dc9b5fa15a31ea03",
+          "pitch": 42,
+          "start_tick": 6547,
+          "duration_tick": 30,
+          "velocity": 71
+        },
+        {
+          "id": "86ee767ec9886f292b6c8ee6",
+          "pitch": 42,
+          "start_tick": 6600,
+          "duration_tick": 30,
+          "velocity": 63
+        },
+        {
+          "id": "d29f6818122fcef169cd2363",
+          "pitch": 42,
+          "start_tick": 6667,
+          "duration_tick": 30,
+          "velocity": 84
+        },
+        {
+          "id": "3406f919e4135355088e0dfa",
+          "pitch": 42,
+          "start_tick": 6720,
+          "duration_tick": 30,
+          "velocity": 74
+        },
+        {
+          "id": "601de3ee98d005d879cc4731",
+          "pitch": 42,
+          "start_tick": 6787,
+          "duration_tick": 30,
+          "velocity": 86
+        },
+        {
+          "id": "3522624de76d179eb8b3ad78",
+          "pitch": 42,
+          "start_tick": 6840,
+          "duration_tick": 30,
+          "velocity": 67
+        },
+        {
+          "id": "7ffd2f286d70359023b8eb4e",
+          "pitch": 42,
+          "start_tick": 6907,
+          "duration_tick": 30,
+          "velocity": 62
+        },
+        {
+          "id": "f0f21d5217de5818b1a20847",
+          "pitch": 42,
+          "start_tick": 6960,
+          "duration_tick": 30,
+          "velocity": 71
+        },
+        {
+          "id": "f39c452cb3d3ea35b3fde748",
+          "pitch": 42,
+          "start_tick": 7027,
+          "duration_tick": 30,
+          "velocity": 65
+        },
+        {
+          "id": "ee2944f01e2376f9b97feb00",
+          "pitch": 42,
+          "start_tick": 7080,
+          "duration_tick": 30,
+          "velocity": 80
+        },
+        {
+          "id": "145cb0e0672097d2fc0a1e34",
+          "pitch": 42,
+          "start_tick": 7147,
+          "duration_tick": 30,
+          "velocity": 66
+        },
+        {
+          "id": "41693e274b7c56cd1923bdb8",
+          "pitch": 42,
+          "start_tick": 7200,
+          "duration_tick": 30,
+          "velocity": 71
+        },
+        {
+          "id": "7e76503fbf99e3a341c2fc11",
+          "pitch": 42,
+          "start_tick": 7267,
+          "duration_tick": 30,
+          "velocity": 68
+        },
+        {
+          "id": "c508d850f433a2385147c88c",
+          "pitch": 42,
+          "start_tick": 7320,
+          "duration_tick": 30,
+          "velocity": 79
+        },
+        {
+          "id": "2615b62297a2d6dd23c8066c",
+          "pitch": 42,
+          "start_tick": 7387,
+          "duration_tick": 30,
+          "velocity": 79
+        },
+        {
+          "id": "deafd6244de0522682aeec51",
+          "pitch": 42,
+          "start_tick": 7440,
+          "duration_tick": 30,
+          "velocity": 80
+        },
+        {
+          "id": "a8d693a05fd85c59c50b778f",
+          "pitch": 42,
+          "start_tick": 7507,
+          "duration_tick": 30,
+          "velocity": 74
+        },
+        {
+          "id": "2b77a8c17f5eab75a2a4b2bb",
+          "pitch": 42,
+          "start_tick": 7560,
+          "duration_tick": 30,
+          "velocity": 74
+        },
+        {
+          "id": "8e7b9b29bbe56579e9005278",
+          "pitch": 42,
+          "start_tick": 7627,
+          "duration_tick": 30,
+          "velocity": 86
+        },
+        {
+          "id": "36cfc77e9a0252aba27eea5d",
+          "pitch": 42,
+          "start_tick": 7680,
+          "duration_tick": 60,
+          "velocity": 58
+        },
+        {
+          "id": "f05127b7a0c1a363b160c968",
+          "pitch": 42,
+          "start_tick": 7949,
+          "duration_tick": 60,
+          "velocity": 75
+        },
+        {
+          "id": "6ce9b034c098d719a7f34d4b",
+          "pitch": 42,
+          "start_tick": 8160,
+          "duration_tick": 60,
+          "velocity": 80
+        },
+        {
+          "id": "93c775f3ea3b797e97764de1",
+          "pitch": 42,
+          "start_tick": 8429,
+          "duration_tick": 60,
+          "velocity": 63
+        },
+        {
+          "id": "1b01abc03b9b3d8bade13ce5",
+          "pitch": 42,
+          "start_tick": 8640,
+          "duration_tick": 60,
+          "velocity": 63
+        },
+        {
+          "id": "6df04ebedeb37874526cf3d4",
+          "pitch": 42,
+          "start_tick": 8909,
+          "duration_tick": 60,
+          "velocity": 76
+        },
+        {
+          "id": "7f5471e34102f79ab9c5dba3",
+          "pitch": 42,
+          "start_tick": 9120,
+          "duration_tick": 60,
+          "velocity": 81
+        },
+        {
+          "id": "db7d579735d36595c23b21ae",
+          "pitch": 42,
+          "start_tick": 9389,
+          "duration_tick": 60,
+          "velocity": 75
+        },
+        {
+          "id": "eb9d2d4aebce131285fc2160",
+          "pitch": 42,
+          "start_tick": 9600,
+          "duration_tick": 60,
+          "velocity": 60
+        },
+        {
+          "id": "bde71cea4c42a8ad55c14e40",
+          "pitch": 42,
+          "start_tick": 9869,
+          "duration_tick": 60,
+          "velocity": 64
+        },
+        {
+          "id": "7e22ac6b7460f96e3fb5536b",
+          "pitch": 42,
+          "start_tick": 10080,
+          "duration_tick": 60,
+          "velocity": 81
+        },
+        {
+          "id": "6a4daf491da79f69b04ce5a3",
+          "pitch": 42,
+          "start_tick": 10349,
+          "duration_tick": 60,
+          "velocity": 76
+        },
+        {
+          "id": "66c6b7002ebf3524a45263cb",
+          "pitch": 42,
+          "start_tick": 10560,
+          "duration_tick": 60,
+          "velocity": 65
+        },
+        {
+          "id": "041b55d7db1552e1eab99345",
+          "pitch": 42,
+          "start_tick": 10829,
+          "duration_tick": 60,
+          "velocity": 75
+        },
+        {
+          "id": "6e025c36c9439aacba21079f",
+          "pitch": 42,
+          "start_tick": 11040,
+          "duration_tick": 60,
+          "velocity": 65
+        },
+        {
+          "id": "88765cc85662d58237e93669",
+          "pitch": 42,
+          "start_tick": 11309,
+          "duration_tick": 60,
+          "velocity": 65
+        },
+        {
+          "id": "6abd32ed5079c6ae8dc109b1",
+          "pitch": 42,
+          "start_tick": 11520,
+          "duration_tick": 60,
+          "velocity": 81
+        },
+        {
+          "id": "9da110736cdb2f222fec7b58",
+          "pitch": 42,
+          "start_tick": 11789,
+          "duration_tick": 60,
+          "velocity": 75
+        },
+        {
+          "id": "f0f0b26ba83f4b2a40cbfa3b",
+          "pitch": 42,
+          "start_tick": 12000,
+          "duration_tick": 60,
+          "velocity": 78
+        },
+        {
+          "id": "83cadf49a4019cc71296b569",
+          "pitch": 42,
+          "start_tick": 12269,
+          "duration_tick": 60,
+          "velocity": 67
+        },
+        {
+          "id": "86483fadfd990384fce5bd2b",
+          "pitch": 42,
+          "start_tick": 12480,
+          "duration_tick": 60,
+          "velocity": 60
+        },
+        {
+          "id": "3364cf6d8f122c36211c23f4",
+          "pitch": 42,
+          "start_tick": 12749,
+          "duration_tick": 60,
+          "velocity": 80
+        },
+        {
+          "id": "5cf9afbff36d30324aea8046",
+          "pitch": 42,
+          "start_tick": 12960,
+          "duration_tick": 60,
+          "velocity": 73
+        },
+        {
+          "id": "c8a34adce8f974bfe224aa38",
+          "pitch": 42,
+          "start_tick": 13229,
+          "duration_tick": 60,
+          "velocity": 70
+        },
+        {
+          "id": "8d8683db76190a7ab6879fe0",
+          "pitch": 42,
+          "start_tick": 13440,
+          "duration_tick": 60,
+          "velocity": 82
+        },
+        {
+          "id": "61d9f6539360a76dc5cb3118",
+          "pitch": 42,
+          "start_tick": 13709,
+          "duration_tick": 60,
+          "velocity": 65
+        },
+        {
+          "id": "b85667df320420b3d33faf8f",
+          "pitch": 42,
+          "start_tick": 13920,
+          "duration_tick": 60,
+          "velocity": 86
+        },
+        {
+          "id": "7c310d6705583a214fdd0fca",
+          "pitch": 42,
+          "start_tick": 14189,
+          "duration_tick": 60,
+          "velocity": 82
+        },
+        {
+          "id": "296de7e2ead9a661aab734e3",
+          "pitch": 42,
+          "start_tick": 14400,
+          "duration_tick": 60,
+          "velocity": 86
+        },
+        {
+          "id": "3c91ed89bfd2609f4d9b9cf6",
+          "pitch": 42,
+          "start_tick": 14669,
+          "duration_tick": 60,
+          "velocity": 73
+        },
+        {
+          "id": "9bcdb3eff980e2d84f306b1d",
+          "pitch": 42,
+          "start_tick": 14880,
+          "duration_tick": 60,
+          "velocity": 88
+        },
+        {
+          "id": "e61a9bebb3d313417c0a682f",
+          "pitch": 42,
+          "start_tick": 15149,
+          "duration_tick": 60,
+          "velocity": 79
+        }
+      ]
+    },
+    {
+      "id": "bass",
+      "name": "bass",
+      "channel": 0,
+      "program": 32,
+      "notes": [
+        {
+          "id": "26ca623e28ed0ec27675f340",
+          "pitch": 36,
+          "start_tick": 0,
+          "duration_tick": 840,
+          "velocity": 101
+        },
+        {
+          "id": "6c2e45e8859a3e353d23c22c",
+          "pitch": 36,
+          "start_tick": 960,
+          "duration_tick": 840,
+          "velocity": 99
+        },
+        {
+          "id": "f824e8ba74830e764191cbc4",
+          "pitch": 36,
+          "start_tick": 1920,
+          "duration_tick": 840,
+          "velocity": 102
+        },
+        {
+          "id": "94d50bedc9c3423ece52acb2",
+          "pitch": 36,
+          "start_tick": 2880,
+          "duration_tick": 840,
+          "velocity": 99
+        },
+        {
+          "id": "4b225c3fe604412d3bb5cb3b",
+          "pitch": 41,
+          "start_tick": 3840,
+          "duration_tick": 840,
+          "velocity": 92
+        },
+        {
+          "id": "eef7f7c20697765def27e36e",
+          "pitch": 41,
+          "start_tick": 4800,
+          "duration_tick": 840,
+          "velocity": 103
+        },
+        {
+          "id": "13f4cc143d3351bea41a4820",
+          "pitch": 43,
+          "start_tick": 5760,
+          "duration_tick": 840,
+          "velocity": 91
+        },
+        {
+          "id": "d9086f2843149cfe3c1a5701",
+          "pitch": 43,
+          "start_tick": 6720,
+          "duration_tick": 840,
+          "velocity": 95
+        },
+        {
+          "id": "e1e2933c1305c77d82b2fd2a",
+          "pitch": 36,
+          "start_tick": 7680,
+          "duration_tick": 840,
+          "velocity": 99
+        },
+        {
+          "id": "dfaf1cae48a4046d20b484d8",
+          "pitch": 36,
+          "start_tick": 8640,
+          "duration_tick": 840,
+          "velocity": 103
+        },
+        {
+          "id": "db5eba5dba7d85666dad0a95",
+          "pitch": 36,
+          "start_tick": 9600,
+          "duration_tick": 840,
+          "velocity": 96
+        },
+        {
+          "id": "fc6d5a0b0b56f2e46cb11076",
+          "pitch": 36,
+          "start_tick": 10560,
+          "duration_tick": 840,
+          "velocity": 105
+        },
+        {
+          "id": "1ff629a0a8360c183d944b58",
+          "pitch": 41,
+          "start_tick": 11520,
+          "duration_tick": 840,
+          "velocity": 90
+        },
+        {
+          "id": "032c3a80f353357a89893660",
+          "pitch": 41,
+          "start_tick": 12480,
+          "duration_tick": 840,
+          "velocity": 98
+        },
+        {
+          "id": "390e8a81cf4f6e33fcadd576",
+          "pitch": 43,
+          "start_tick": 13440,
+          "duration_tick": 840,
+          "velocity": 97
+        },
+        {
+          "id": "444fd539e1c4cb5da7bafe16",
+          "pitch": 43,
+          "start_tick": 14400,
+          "duration_tick": 840,
+          "velocity": 94
+        }
+      ]
+    },
+    {
+      "id": "chords",
+      "name": "chords",
+      "channel": 1,
+      "program": 0,
+      "notes": [
+        {
+          "id": "ce1119742518fcd49998ffa2",
+          "pitch": 60,
+          "start_tick": 0,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "02ff594b79cdb2979c600071",
+          "pitch": 63,
+          "start_tick": 0,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "0af94865cac03a973dbdf595",
+          "pitch": 67,
+          "start_tick": 0,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "5d5ebb144f15691eebf79e9e",
+          "pitch": 60,
+          "start_tick": 1920,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "ca886b76ef22ee913eeb6727",
+          "pitch": 63,
+          "start_tick": 1920,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "d6548aad7930252649a4e5a8",
+          "pitch": 67,
+          "start_tick": 1920,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "ffa4206da23141c5dee6de90",
+          "pitch": 65,
+          "start_tick": 3840,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "7aff7bf628ed11c1eefd5e39",
+          "pitch": 68,
+          "start_tick": 3840,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "eb2f6b6d94f494f57f3c0ed1",
+          "pitch": 72,
+          "start_tick": 3840,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "bb0c1b89f7b8c9b02fb08a85",
+          "pitch": 67,
+          "start_tick": 5760,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "322c4109529993ff27a73db5",
+          "pitch": 70,
+          "start_tick": 5760,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "978f35ffd02599981effe8ce",
+          "pitch": 74,
+          "start_tick": 5760,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "f1fda46e500152203deaeddd",
+          "pitch": 60,
+          "start_tick": 7680,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "f97e8ba81b40794bd3723518",
+          "pitch": 63,
+          "start_tick": 7680,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "a3232fa821e1bc07ae3de392",
+          "pitch": 67,
+          "start_tick": 7680,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "de332732cd8da8035502fe3a",
+          "pitch": 60,
+          "start_tick": 9600,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "6e7107d57d2092b9c0f7e002",
+          "pitch": 63,
+          "start_tick": 9600,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "ffd09cd6fcfde663e35c8ba9",
+          "pitch": 67,
+          "start_tick": 9600,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "2b682d888fab10841ab81d9f",
+          "pitch": 65,
+          "start_tick": 11520,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "4b7012a249d0ccddc641ad9c",
+          "pitch": 68,
+          "start_tick": 11520,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "6942f84820cc5ea66ae1943d",
+          "pitch": 72,
+          "start_tick": 11520,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "d60742316eaac1b201e225a2",
+          "pitch": 67,
+          "start_tick": 13440,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "40ce2ff6ecce6bd61e270afb",
+          "pitch": 70,
+          "start_tick": 13440,
+          "duration_tick": 1680,
+          "velocity": 64
+        },
+        {
+          "id": "b8e8323f8e35d271aca8bb09",
+          "pitch": 74,
+          "start_tick": 13440,
+          "duration_tick": 1680,
+          "velocity": 64
+        }
+      ]
+    }
+  ],
+  "protected_tracks": [
+    "bass",
+    "chords",
+    "kick",
+    "snare"
+  ],
+  "audit": {
+    "action": "edit",
+    "plan": {
+      "track_id": "hihat",
+      "start_bar": 3,
+      "end_bar": 4,
+      "operation": "density",
+      "value": 32
+    },
+    "protected_hashes": {
+      "kick": {
+        "before": "07788f6d293b14056d5b3842f9f08a2b0c81dd116c5d61d70b60ed35ab5a3d28",
+        "after": "07788f6d293b14056d5b3842f9f08a2b0c81dd116c5d61d70b60ed35ab5a3d28"
+      },
+      "snare": {
+        "before": "3b6cce4f27ac8d009a54f8faa94d646c376541b01b8d76f2d69fbb9009cb54de",
+        "after": "3b6cce4f27ac8d009a54f8faa94d646c376541b01b8d76f2d69fbb9009cb54de"
+      },
+      "bass": {
+        "before": "45d36f17491fca331ca016241f59b7dbc4a098a2ae8588760795e5301598cc64",
+        "after": "45d36f17491fca331ca016241f59b7dbc4a098a2ae8588760795e5301598cc64"
+      },
+      "chords": {
+        "before": "057121a9e424fae1ea593cc5838befbbd4aa974497ae17e57bcde241923c92cd",
+        "after": "057121a9e424fae1ea593cc5838befbbd4aa974497ae17e57bcde241923c92cd"
+      }
+    },
+    "parent_hash": "705185bb824db355b05bf5f8633ce633d2d38659fb2ae093748f5490a467bc8c",
+    "scope_verified": true
+  }
+}

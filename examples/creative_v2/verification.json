@@ -1,0 +1,44 @@
+{
+  "A": {
+    "note_counts": {
+      "kick": 16,
+      "snare": 32,
+      "hihat": 64,
+      "bass": 16,
+      "chords": 48,
+      "melody": 32
+    },
+    "midi_tracks_including_meta": 7,
+    "wav_seconds": 50.5263125,
+    "reproduction": "PASS"
+  },
+  "B": {
+    "note_counts": {
+      "kick": 56,
+      "snare": 34,
+      "hihat": 128,
+      "bass": 32,
+      "chords": 48,
+      "melody": 32
+    },
+    "midi_tracks_including_meta": 7,
+    "wav_seconds": 50.5263125,
+    "reproduction": "PASS"
+  },
+  "C": {
+    "note_counts": {
+      "kick": 16,
+      "snare": 32,
+      "hihat": 64,
+      "bass": 16,
+      "chords": 48,
+      "melody": 24
+    },
+    "midi_tracks_including_meta": 7,
+    "wav_seconds": 50.5263125,
+    "reproduction": "PASS"
+  },
+  "C_protected_tracks": "PASS",
+  "human_listening": "PENDING_HUMAN_REVIEW",
+  "live_deepseek_v2": "NOT_RUN"
+}

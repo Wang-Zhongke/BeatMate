@@ -1,0 +1,30 @@
+{
+  "case": "B",
+  "brief": {
+    "raw_text": "伤感但有推动力，后半段适度释放，不要靠大量加密鼓点。",
+    "constraints": {},
+    "assumptions": [],
+    "final_prompt": "伤感但有推动力，后半段适度释放，不要靠大量加密鼓点。",
+    "prompt_mode": "direct",
+    "template_version": null,
+    "warnings": [],
+    "requires_review": false,
+    "detected_conflict": false
+  },
+  "requested_model": null,
+  "returned_model": null,
+  "output_files": [],
+  "status": "NOT_RUN",
+  "actual_cost": {
+    "status": "unknown"
+  },
+  "human_review": {
+    "status": "PENDING_HUMAN_REVIEW",
+    "情绪符合度": null,
+    "声音质感": null,
+    "旋律与留白": null,
+    "段落变化": null,
+    "是否愿意用于写词或录Rap": null,
+    "notes": null
+  }
+}

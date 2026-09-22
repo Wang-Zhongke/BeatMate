@@ -1,0 +1,104 @@
+{
+  "parent_id": "fe55e1f50015446b9e9349a043e471c6",
+  "version_id": "97a89085793b45fc8b2600f47cbbf90a",
+  "plan": {
+    "track_id": "melody",
+    "start_bar": 9,
+    "end_bar": 16,
+    "operation": "thin_notes",
+    "value": 50
+  },
+  "tracks": [
+    {
+      "track_id": "kick",
+      "before_count": 16,
+      "after_count": 16,
+      "removed_ids": [],
+      "added_ids": [],
+      "before_hash": "e2fa662a7cef07d8a70f612b7df32ac4e312e0935a5cba4a940a4d0b0dfc0ef6",
+      "after_hash": "e2fa662a7cef07d8a70f612b7df32ac4e312e0935a5cba4a940a4d0b0dfc0ef6",
+      "outside_unchanged": true
+    },
+    {
+      "track_id": "snare",
+      "before_count": 32,
+      "after_count": 32,
+      "removed_ids": [],
+      "added_ids": [],
+      "before_hash": "dc39935db51cdf0b21bf793709b3f28ae64a24e12669709ba79c245936ed8641",
+      "after_hash": "dc39935db51cdf0b21bf793709b3f28ae64a24e12669709ba79c245936ed8641",
+      "outside_unchanged": true
+    },
+    {
+      "track_id": "hihat",
+      "before_count": 64,
+      "after_count": 64,
+      "removed_ids": [],
+      "added_ids": [],
+      "before_hash": "6dfcb0a4e379efc201a37d22b350d1684a756d5ece48df55a9b6a2532863c8f5",
+      "after_hash": "6dfcb0a4e379efc201a37d22b350d1684a756d5ece48df55a9b6a2532863c8f5",
+      "outside_unchanged": true
+    },
+    {
+      "track_id": "bass",
+      "before_count": 16,
+      "after_count": 16,
+      "removed_ids": [],
+      "added_ids": [],
+      "before_hash": "f1c773784e9f4eca6120e5a3b51c25457a308235d4bdb7f047b2987ff8da72da",
+      "after_hash": "f1c773784e9f4eca6120e5a3b51c25457a308235d4bdb7f047b2987ff8da72da",
+      "outside_unchanged": true
+    },
+    {
+      "track_id": "chords",
+      "before_count": 48,
+      "after_count": 48,
+      "removed_ids": [],
+      "added_ids": [],
+      "before_hash": "834601198f33b48d3367f0ea9bca9a9052c00d8b93fb02468fef6084dadfd704",
+      "after_hash": "834601198f33b48d3367f0ea9bca9a9052c00d8b93fb02468fef6084dadfd704",
+      "outside_unchanged": true
+    },
+    {
+      "track_id": "melody",
+      "before_count": 32,
+      "after_count": 24,
+      "removed_ids": [
+        "2ea96ce91f7e9e915c9dc3e4",
+        "597dd9a20fe09ded0f8b1935",
+        "67fbdc93e3b9e8704c049634",
+        "7b1a7f9ae8870ec8ef4a4759",
+        "8326b415d677cd7c414970af",
+        "be3daa4c8b2b204a2f674cd0",
+        "c57bcdbb13de309745a7248d",
+        "f495eef7f917f4a2d1903f6b"
+      ],
+      "added_ids": [],
+      "before_hash": "ae233052ec33417934d01e5c26965c1fb2962f9ac53aed67ba39e143c0cb641d",
+      "after_hash": "a3cc829c0bc36117a4829c24a1f9173d65d2aa0442643ce20c39fe5ccf35f0df",
+      "outside_unchanged": true
+    }
+  ],
+  "protection": {
+    "kick": {
+      "before": "e2fa662a7cef07d8a70f612b7df32ac4e312e0935a5cba4a940a4d0b0dfc0ef6",
+      "after": "e2fa662a7cef07d8a70f612b7df32ac4e312e0935a5cba4a940a4d0b0dfc0ef6"
+    },
+    "snare": {
+      "before": "dc39935db51cdf0b21bf793709b3f28ae64a24e12669709ba79c245936ed8641",
+      "after": "dc39935db51cdf0b21bf793709b3f28ae64a24e12669709ba79c245936ed8641"
+    },
+    "hihat": {
+      "before": "6dfcb0a4e379efc201a37d22b350d1684a756d5ece48df55a9b6a2532863c8f5",
+      "after": "6dfcb0a4e379efc201a37d22b350d1684a756d5ece48df55a9b6a2532863c8f5"
+    },
+    "bass": {
+      "before": "f1c773784e9f4eca6120e5a3b51c25457a308235d4bdb7f047b2987ff8da72da",
+      "after": "f1c773784e9f4eca6120e5a3b51c25457a308235d4bdb7f047b2987ff8da72da"
+    },
+    "chords": {
+      "before": "834601198f33b48d3367f0ea9bca9a9052c00d8b93fb02468fef6084dadfd704",
+      "after": "834601198f33b48d3367f0ea9bca9a9052c00d8b93fb02468fef6084dadfd704"
+    }
+  }
+}

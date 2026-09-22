@@ -1,0 +1,12 @@
+{
+  "raw_text": "只让后半段旋律更克制，鼓和贝斯不要动。",
+  "resolved_scope": {
+    "track_id": "melody",
+    "start_bar": 9,
+    "end_bar": 16,
+    "operation": "thin_notes",
+    "value": 50
+  },
+  "interpretation": "更克制在本轮仅解释为减少melody音符，保持锚点；不保证情绪效果。",
+  "creation_brief_inherited_from": "fe55e1f50015446b9e9349a043e471c6"
+}

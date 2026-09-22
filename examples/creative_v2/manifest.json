@@ -1,0 +1,8 @@
+{
+  "planner": "mock",
+  "generator_version": "rules-v2.0",
+  "A": "fe55e1f50015446b9e9349a043e471c6",
+  "B": "d2d1283896e54336b13555e9a3bca380",
+  "C": "97a89085793b45fc8b2600f47cbbf90a",
+  "note": "B使用A作为可信创作参考；C是A的真实新版本。所有文件为离线规则生成。"
+}

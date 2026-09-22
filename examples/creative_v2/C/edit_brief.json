@@ -1,0 +1,39 @@
+{
+  "raw_text": "只让后半段旋律更克制，鼓和贝斯不要动。",
+  "explicit": {
+    "emotions": [],
+    "scene": [],
+    "expression": [
+      "只让后半段旋律更克制"
+    ],
+    "references": [],
+    "purpose": [],
+    "prohibitions": [
+      "鼓和贝斯不要动"
+    ],
+    "other": []
+  },
+  "constraints": {},
+  "constraint_sources": {},
+  "interpretation_rules": [],
+  "assumptions": [
+    {
+      "parameter": "operation",
+      "value": "thin_notes",
+      "source": "system_inference",
+      "reason": "本轮将更克制限制为旋律减密；未宣称改变音色情绪。"
+    },
+    {
+      "parameter": "value",
+      "value": 50,
+      "source": "system_inference",
+      "reason": "使用已实现的确定性保留锚点规则。"
+    }
+  ],
+  "reference_interpretations": [],
+  "limitations": [
+    "情绪与共鸣需人工试听，不提供共鸣评分。",
+    "音色提示只供制作参考；WAV为现有基础合成器，不是真实吉他或钢琴演奏。",
+    "自由文本证据按有限关键词提取；未识别内容保留在raw_text/other，不声称完整理解。"
+  ]
+}
