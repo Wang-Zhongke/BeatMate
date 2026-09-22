@@ -1,0 +1,24 @@
+{
+  "title": "Jazz Beat",
+  "provider": "mureka",
+  "requested_model": "mureka-9",
+  "returned_model": "mureka-9",
+  "generated_at": "2026-09-19T15:06:36.602795+00:00",
+  "creation_mode": "instrumental",
+  "constraints": {
+    "mood": "chill、relax",
+    "style": "Jazz、chill"
+  },
+  "preview_encoding": "AAC 192 kbps, M4A; full duration, no edits or normalization",
+  "tracks": [
+    {
+      "role": "instrumental",
+      "preview": "instrumental.m4a",
+      "duration_seconds": 149.47,
+      "source_format": "wav",
+      "source_sha256": "f99c88640ab1d9062f4d2bae27a21e4755ed4120fdb2c0cf26243aa11d88dcf4",
+      "preview_sha256": "f519758e0bf75585ed145a7cf817afdde8fa2df82826f457f1cc601bf838997a"
+    }
+  ],
+  "evaluation": "No formal listening scores assigned; requested style/BPM are not measurements."
+}

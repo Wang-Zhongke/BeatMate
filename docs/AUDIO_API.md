@@ -88,4 +88,4 @@ PY
 
 再次运行同一目录恢复同一个请求，后续仅查询/下载。超时为PENDING，可继续运行；无Key/未启用/账户权限额度阻塞为SKIPPED；明确生成或契约错误为FAIL。PASS只证明工程闭环，听感仍待人工。报告保留输入、最终提示词、模型、文件和hash，不包含Key。不要用不同目录反复运行来绕过预算。
 
-[A/B/C人工实验表](../examples/audio_mvp) 已准备，均NOT_RUN，无真实输出、无人工评分；不自动批量付费。核心边界、状态恢复和文件清单见 [AUDIO_MVP](AUDIO_MVP.md)，实际回归见 [ACCEPTANCE](ACCEPTANCE.md)。
+[人工评价模板](evaluation/templates/README.md) 供逐首记录听感；[真实作品案例](../examples/showcase/README.md) 提供已有结果，不需要重新付费生成。工程验证范围见 [测试说明](ACCEPTANCE.md)。

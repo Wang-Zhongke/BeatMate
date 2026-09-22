@@ -1,0 +1,39 @@
+{
+  "title": "半杯常温",
+  "provider": "mureka",
+  "requested_model": "mureka-9",
+  "returned_model": "mureka-9",
+  "generated_at": "2026-09-18T11:53:09.158067+00:00",
+  "creation_mode": "song_stems",
+  "constraints": {
+    "style": "Jazz Hip-hop"
+  },
+  "preview_encoding": "AAC 192 kbps, M4A; full duration, no edits or normalization",
+  "tracks": [
+    {
+      "role": "mix",
+      "preview": "mix.m4a",
+      "duration_seconds": 179.79,
+      "source_format": "wav",
+      "source_sha256": "f553e32300b098c9e298e3ee71b900af5ada9763e0269991d3d7ee6f520d6667",
+      "preview_sha256": "c90f60163ce913e1a1531ea6982f9a6e641cd0c30b3b234530986558fd0670d1"
+    },
+    {
+      "role": "vocals",
+      "preview": "vocals.m4a",
+      "duration_seconds": 179.79,
+      "source_format": "wav",
+      "source_sha256": "01059bc6d919345e30ab85097c6a59a0b737c4bb29db9cfe2183d965407e8956",
+      "preview_sha256": "bcfd756e84970f12e0aad4dadff50a0c1cfc9b11c3612c04fb788c285c38f8f0"
+    },
+    {
+      "role": "instrumental",
+      "preview": "instrumental.m4a",
+      "duration_seconds": 179.79,
+      "source_format": "wav",
+      "source_sha256": "1150af92ac69f067dd29d214ec8d77028eedf4caa65eac42eeed1f156c4f1e32",
+      "preview_sha256": "c0f06e28892e22c181399ef672f54285277fc77d0baff3aaa53cd97c5db91e5c"
+    }
+  ],
+  "evaluation": "No formal listening scores assigned; requested style/BPM are not measurements."
+}

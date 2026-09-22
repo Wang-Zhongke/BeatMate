@@ -1,6 +1,13 @@
 {
   "name": "beatmate-browser-checks",
   "private": true,
-  "scripts": {"test": "playwright test --config playwright.config.mjs"},
-  "devDependencies": {"playwright": "1.62.1"}
+  "scripts": {
+    "test": "playwright test --config playwright.config.mjs",
+    "format:check": "prettier --check \"../../beatmate/ui/*.js\" \"../../beatmate/ui/*.css\" ../../beatmate/audio.html \"../ui/*.mjs\" \"*.mjs\" ../../examples/showcase/index.html",
+    "format": "prettier --write \"../../beatmate/ui/*.js\" \"../../beatmate/ui/*.css\" ../../beatmate/audio.html \"../ui/*.mjs\" \"*.mjs\" ../../examples/showcase/index.html"
+  },
+  "devDependencies": {
+    "playwright": "1.62.1",
+    "prettier": "3.6.2"
+  }
 }

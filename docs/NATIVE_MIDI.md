@@ -6,7 +6,7 @@
 
 ## 情绪与场景创作
 
-新入口保存原话及 CreativeBrief，将系统推断独立记为 assumptions；规则生成器把高层参数变成音符。新增可选 melody、分解和弦、密度/力度/留白及四小节段落变化。艺人参考只转成宽泛创作特征，不读取具体歌曲、歌词或采样。完整字段行为与兼容策略见 [Creative v2 设计](CREATIVE_V2.md)。
+新入口保存原话及 CreativeBrief，将系统推断独立记为 assumptions；规则生成器把高层参数变成音符。新增可选 melody、分解和弦、密度/力度/留白及四小节段落变化。艺人参考只转成宽泛创作特征，不读取具体歌曲、歌词或采样。完整字段行为与兼容策略见 [Creative v2 设计](archive/CREATIVE_V2.md)。
 
 ```bash
 # 永久离线 A/B/C 演示，临时独立数据库；输出目录必须不存在
@@ -26,7 +26,7 @@
 
 可在子命令之前添加 `--db path/to/database.sqlite3`。比较“比刚才更有推动力”时，`creative` 使用 `--reference-project PROJECT_ID --reference-version VERSION_ID` 读取可信参考。明确范围可用 `plan-edit --track melody --start-bar 9 --end-bar 16`；缺少明确范围只返回建议，不能 apply。`thin_notes` 每小节保留首音及交替音符；其他轨、范围外事件和速度不变，沿用保护与事务校验。
 
-现成 [A/B/C 示例](../examples/creative_v2/README.md) 包含原始输入、brief、规格、参数说明、MIDI、参考WAV及C的差异与保护哈希。三例均为76 BPM、16小节，约50.5秒；人工试听记录尚未填写。音色建议不是实际吉他音色，基础WAV不代表成品混音，也不声称共鸣或已经听过结果。
+现成 [A/B/C 示例](../examples/legacy-midi/creative_v2/README.md) 包含原始输入、brief、规格、参数说明、MIDI、参考WAV及C的差异与保护哈希。三例均为76 BPM、16小节，约50.5秒；人工试听记录尚未填写。音色建议不是实际吉他音色，基础WAV不代表成品混音，也不声称共鸣或已经听过结果。
 
 启动仍使用 `.venv/bin/python -m beatmate serve`，无配置默认Mock。已运行的旧服务需重启才会加载新入口：
 
@@ -38,7 +38,7 @@ POST /projects/{id}/plan   {"text":"只让后半段旋律更克制，鼓和贝�
 
 两个创作接口可传 `reference_project_id` / `reference_version`；创建接口可额外传完整 `spec`，跳过模型但仍校验原话约束。规划接口可传 `track_id/start_bar/end_bar/protected_tracks`；模型不能扩大范围。把 ready 响应的 `base_version/plan/protected_tracks` 交给既有 `/projects/{id}/edits` 提交。导出接口保持不变。
 
-DeepSeek 环境配置沿用下文，无新密钥或SDK。配置后将上述 `creative` / `plan-edit` 的 `--planner mock` 改为 `--planner deepseek` 即分别显式调用一次真实模型；`apply-edit` 不调用模型。本轮 v2 已验证注入响应及离线闭环，**未实测新版结构化规格的真实DeepSeek调用**；下文既有 smoke test 覆盖的是 v1。不会失败后回退Mock。
+DeepSeek 环境配置沿用下文，无新密钥或SDK。配置后将上述 `creative` / `plan-edit` 的 `--planner mock` 改为 `--planner deepseek` 即分别显式调用一次真实模型；`apply-edit` 不调用模型。v2 自动测试覆盖注入响应及离线闭环，**未实测新版结构化规格的真实DeepSeek调用**；下文既有 smoke test 覆盖的是 v1。不会失败后回退Mock。
 
 现有限制：4/4、1–32小节；有短动机和四小节起伏，没有完整主歌/副歌歌曲结构、歌词、真实木吉他/808音色设计。不支持的“更温暖/更空灵”编辑只返回建议。旧五轨入口与历史快照保持 schema_version=1，新创作入口才使用2，不批量迁移。
 
@@ -53,11 +53,11 @@ python3 -m venv .venv
 
 `demo` 全程离线生成 90 BPM、8小节的 boom bap；保护 kick/snare/bass/chords，只把第3–4小节 hihat 改为每小节32个音符。`output/` 内含两个版本的 JSON、MIDI 和 WAV。默认 Mock 永久可用，不读取密钥、不调用网络。依赖只在首次安装时下载。
 
-仓库已包含 [前后对比样例](../examples/demo)：v1/v2 的 MIDI、WAV 和完整状态。WAV 是由原生音符驱动的简单参考合成器，不是成品混音。MIDI 是 Type 1，包含一条速度/拍号轨和 kick、snare、hihat、bass、chords 五条命名轨。
+仓库已包含 [前后对比样例](../examples/legacy-midi/demo)：v1/v2 的 MIDI、WAV 和完整状态。WAV 是由原生音符驱动的简单参考合成器，不是成品混音。MIDI 是 Type 1，包含一条速度/拍号轨和 kick、snare、hihat、bass、chords 五条命名轨。
 
 ## 核心契约
 
-先定义的 [设计与验收标准](DESIGN.md) 说明项目状态、Note/Track/BeatSpec、工具接口和版本约束。
+先定义的 [设计与验收标准](archive/DESIGN.md) 说明项目状态、Note/Track/BeatSpec、工具接口和版本约束。
 
 - 固定4/4，480 PPQ，整数 tick；支持 boom_bap / trap，1–32小节。
 - 每次成功编辑保存完整新版本，记录 parent、编辑方案和受保护音轨的 SHA-256 前后值。
@@ -107,7 +107,7 @@ Mock 识别有限关键词，未识别的创作描述会返回 defaults/assumpti
 
 选择顺序：`serve --planner ...` > `BEATMATE_PLANNER` > `mock`。`demo` 永远使用离线 Mock，即使环境选择了 DeepSeek。直接使用 `Service()` 仍默认Mock；Python调用方可显式传入 `create_planner()` 的结果。
 
-不含密钥的示例：[.env.example](../.env.example)。**原生 MIDI Planner 不会自动加载 `.env`**，需要进程环境变量。音频工作台的 `audio-*` 命令会加载音频配置，两者是独立入口。
+不含密钥的示例：[config/native-midi.env.example](../config/native-midi.env.example)。**原生 MIDI Planner 不会自动加载 `.env`**，需要进程环境变量。音频工作台的 `audio-*` 命令会加载音频配置，两者是独立入口。
 
 | 环境变量 | 默认值 | 作用 |
 |---|---|---|
@@ -143,7 +143,7 @@ DeepSeek主调用路径是 `POST {DEEPSEEK_BASE_URL}/responses`，官方默认�
 
 启用DeepSeek/OpenAI时，创作请求发送至对应供应商；Mock完全离线。DeepSeek自定义Base URL必须是可信HTTPS基础地址，不能包含凭据、query或fragment，也不能填写完整 `/responses` 端点。错误信息不回显供应商响应正文或Key。
 
-兼容性依据：[DeepSeek Responses API](https://api-docs.deepseek.com/zh-cn/guides/responses_api/)、[DeepSeek官方首页](https://api-docs.deepseek.com/)。既有OpenAI路径依据：[OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)。首次真实检查因缺少Key而SKIPPED；后续用户在本机启动带Key的服务后，已完成两次真实DeepSeek调用及创建、局部编辑、MIDI/WAV导出验收。结果见docs/ACCEPTANCE.md中的简化emo草稿记录；Logic Pro实机导入仍待验证。
+兼容性依据：[DeepSeek Responses API](https://api-docs.deepseek.com/zh-cn/guides/responses_api/)、[DeepSeek官方首页](https://api-docs.deepseek.com/)。既有OpenAI路径依据：[OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)。原生 MIDI 的自动测试使用 Mock 或注入响应；真实 Planner 和 DAW 导入需在各自环境中单独验证。
 
 ## 显式真实调用 smoke test
 
@@ -170,4 +170,4 @@ FAIL退出码为1，PASS/SKIPPED为0；自动化判断必须读取JSON的 `statu
 
 ## DAW 手工验证
 
-在空白工程导入 `examples/demo/v1.mid`，检查 90 BPM、4/4、8 小节及五条乐器音轨；鼓音符在第 10 通道，需要手动选鼓组、bass、keys。再导入 v2，核对只有第 3–4 小节 hihat 变密。Logic Pro 实际导入表现仍需实机验证；不生成 `.logicx`，不复制插件音色。
+在空白工程导入 `examples/legacy-midi/demo/v1.mid`，检查 90 BPM、4/4、8 小节及五条乐器音轨；鼓音符在第 10 通道，需要手动选鼓组、bass、keys。再导入 v2，核对只有第 3–4 小节 hihat 变密。Logic Pro 实际导入表现仍需实机验证；不生成 `.logicx`，不复制插件音色。

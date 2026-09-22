@@ -64,4 +64,4 @@ LLM仅返回完整CreativeSpec或operation/value。它不能直接生成音符�
 - `api.py` / `cli.py`：新创作及规划入口，已有入口保留。
 - `creative_demo.py` / `tests/test_creative.py`：离线A/B/C产物与24项新增测试。
 
-命令与API请求见 [README](../README.md)；实际验证状态见 [ACCEPTANCE](ACCEPTANCE.md)。演示C保留继承自A的创作brief，编辑原话、单独CreativeBrief及解释在 `input.txt` / `edit_brief.json` / `edit_intent.json`，差异及保护hash在 `diff.json`。这是A的真实子版本，没有覆写A。
+命令与API请求见 [README](../../README.md)；实际验证状态见 [ACCEPTANCE](../ACCEPTANCE.md)。演示C保留继承自A的创作brief，编辑原话、单独CreativeBrief及解释在 `input.txt` / `edit_brief.json` / `edit_intent.json`，差异及保护hash在 `diff.json`。这是A的真实子版本，没有覆写A。

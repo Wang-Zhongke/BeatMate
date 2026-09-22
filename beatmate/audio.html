@@ -1,54 +1,370 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="dark"><title>BeatMate — 创作室</title><link rel="stylesheet" href="/audio/ui/studio.css"></head>
-<body>
-<section id="entrance" aria-label="BeatMate 封面" hidden>
- <div class="cover-art" aria-hidden="true"><img src="/audio/ui/cover.png" alt=""><div class="studio-light"></div></div><div class="cover-shade"></div>
- <header><span class="brand">BeatMate <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></span><button id="skip-cover" class="quiet">直接进入 <span aria-hidden="true">↗</span></button></header>
- <div class="cover-copy"><h1>BeatMate</h1><p>把灵感，做成你的 Beat。</p><button id="enter" class="gold">进入创作室 <span aria-hidden="true">▶</span></button><label class="check"><input type="checkbox" id="skip-next">下次直接进入</label></div>
- <footer>用 AI 创作 Hip-hop 伴奏，为你的说唱留出空间。</footer>
-</section>
-<div id="app" class="app" data-view="studio">
- <aside class="sidebar"><button class="brand" id="brand-cover" title="查看动态封面">BeatMate <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></button><nav aria-label="主导航"><button aria-label="创作室" data-view="studio" class="active"><span data-icon="pen"></span><span>创作室</span></button><button aria-label="我的音乐" data-view="music"><span data-icon="music"></span><span>我的音乐</span></button><button aria-label="收藏" data-view="favorites"><span data-icon="heart"></span><span>收藏</span></button><button aria-label="回收站" data-view="trash"><span data-icon="trash"></span><span>回收站</span></button></nav><div class="sidebar-bottom"><p>你的下一首，<br>从这里开始。</p><button id="settings-open" aria-label="设置"><span data-icon="settings"></span><span>设置</span></button></div></aside>
- <section class="composer" aria-labelledby="composer-title"><div class="composer-top"><div><h2 id="composer-title">创作室</h2><p class="composer-note">让你的故事，有自己的节奏。</p></div><button id="service-open" class="service-pill">连接中…</button></div>
- <form id="form"><div class="form-content"><div class="mode-switch" role="group" aria-label="创作方式"><button type="button" data-mode="instrumental" aria-pressed="true">纯伴奏</button><button type="button" data-mode="song_stems" aria-pressed="false">歌词歌曲</button></div><p id="mode-help" class="help"></p>
- <label for="title">音乐名称 <small>选填</small></label><input id="title" maxlength="50" placeholder="给这段声音起个名字"><div class="counter" id="title-count">0 / 50</div>
- <div id="lyrics-field" hidden><label for="lyrics">歌词</label><textarea id="lyrics" rows="8" placeholder="[主歌]&#10;凌晨两点半，手机亮了又暗&#10;没说出口的话，留在空白的对话框&#10;&#10;[副歌]&#10;……"></textarea><div class="counter" id="lyrics-count">0 / 5000</div></div>
- <label for="raw" id="raw-label">音乐描述</label><textarea id="raw" rows="7" required placeholder="描述一种情绪、一段场景。&#10;例如：克制的 emo hip-hop，木吉他、稀疏钢琴与温暖的808，为旋律 Rap 留出空间。"></textarea><div class="counter" id="raw-count">0 / 1024</div>
- <details class="preferences"><summary>更多制作偏好</summary><div id="options"></div><label for="project">保存到项目</label><select id="project"><option value="">新项目</option></select></details>
- <div id="count-field" hidden><label for="count">生成版本数</label><select id="count"><option value="1">1 个版本</option></select></div><p id="single-version" class="help single-version">每次请求 1 个版本</p><p id="service-error" class="error" role="status"></p></div>
- <div class="create-footer"><button id="preview-action" type="submit" class="gold" disabled>预览创作</button><p class="help">预览免费，确认后才提交生成请求。</p><p id="form-error" class="error" role="status"></p><button id="retry-pending" type="button" class="secondary" hidden>恢复上次提交</button></div></form></section>
- <main class="library" id="library"><header class="library-top"><div><h2 id="library-title">我的音乐</h2><span id="work-count" class="muted"></span></div><label class="search"><span data-icon="search"></span><input id="search" placeholder="搜索歌名" aria-label="搜索歌名"></label></header>
- <div class="library-tools"><div class="filters" role="group" aria-label="筛选音乐"><button data-filter="all" aria-pressed="true">全部</button><button data-filter="favorites" aria-pressed="false">收藏</button><button data-filter="mock" aria-pressed="false">测试</button></div><select id="sort" aria-label="排序"><option value="newest">最近创建</option><option value="oldest">最早创建</option><option value="title">按名称</option></select><button id="batch-toggle" class="quiet">选择</button></div>
- <div id="batch-bar" hidden><label class="check"><input type="checkbox" id="select-all">全选当前页</label><span id="selection-count"></span><button id="batch-action" class="secondary">删除所选</button><button id="empty-trash" class="danger" hidden>永久删除本页作品</button></div>
- <p id="connection-error" class="error" role="status"></p><p id="library-hint" class="help" hidden></p><section id="task-region" class="task-region" aria-label="任务动态" hidden></section><div id="task-pagination" class="pagination" hidden><button id="task-previous" class="secondary">上一页任务</button><span id="task-page-status" role="status"></span><button id="task-next" class="secondary">下一页任务</button></div><div class="list-head"><span>音乐作品</span><span>时长 / 操作</span></div><div id="works"></div><div id="pagination" class="pagination" aria-label="曲库分页" hidden><button id="page-previous" class="secondary">上一页</button><span id="page-status" role="status"></span><button id="page-next" class="secondary">下一页</button></div><div id="empty" class="empty" hidden><div class="empty-record" aria-hidden="true"></div><h3>下一首，从这里开始。</h3><p>写下一个场景、一种情绪，留下属于你的声音。</p></div>
- </main>
- <footer id="player" class="player" aria-label="音乐播放器"><div class="now-playing"><div id="player-art" class="art small" aria-hidden="true"></div><div><strong id="player-title">还没有播放音乐</strong><span id="player-role">选择一首，开始试听。</span></div></div><div class="player-center"><div class="transport"><button id="previous" aria-label="上一首" disabled data-icon="previous"></button><button id="play" class="play-main" aria-label="播放" disabled data-icon="play"></button><button id="next" aria-label="下一首" disabled data-icon="next"></button></div><div class="timeline"><span id="elapsed">0:00</span><input id="seek" aria-label="播放进度" type="range" min="0" max="1000" value="0" disabled><span id="duration">0:00</span></div></div><div class="player-end"><button id="listening-open" class="quiet">对比 / 备注</button><span data-icon="volume"></span><input id="volume" aria-label="音量" type="range" min="0" max="1" step="0.01" value="0.8"><button id="queue-open" aria-label="播放队列" data-icon="queue"></button></div><audio id="audio" preload="none"></audio></footer>
-</div>
-<dialog id="preview-dialog"><header><h2>确认创作</h2><button class="close" aria-label="关闭预览" data-close="preview-dialog">×</button></header><h3 id="preview-title"></h3><p class="help">音乐描述原文</p><pre id="preview-prompt"></pre><div id="preview-lyrics-wrap" hidden><p class="help">歌词原文 · 独立提交</p><pre id="preview-lyrics"></pre></div><p id="preview-warnings" class="help"></p><p id="generation-info"></p><p id="generate-reason" class="error"></p><div class="dialog-actions"><button class="secondary" data-close="preview-dialog">返回编辑</button><button id="generate" class="gold">确认生成</button></div></dialog>
-<dialog id="settings-dialog"><header><h2>设置</h2><button class="close" aria-label="关闭设置" data-close="settings-dialog">×</button></header><h3>音乐服务</h3><p id="provider-info"></p><p id="config-error" class="error"></p><p class="help">服务与 API Key 由本机 .env 配置加载。</p><h3>调用额度</h3><p id="budget-status" class="help"></p><label for="budget-limit">累计请求上限</label><div class="inline"><input id="budget-limit" type="number" min="1" step="1"><button id="save-budget" class="secondary">保存</button></div><p class="help">包含已预留的分离调用；删除作品不会重置计数。这不是供应商余额。</p><p id="budget-message" role="status"></p><h3>运行检查</h3><p id="restart-notice" class="error" hidden>代码或配置已更新。请在原终端按 Ctrl+C，运行 ./start.command，再刷新页面。</p><div id="health-checks"></div><details><summary>运行位置与版本</summary><pre id="runtime-info"></pre></details><div class="health-actions"><button id="health-refresh" class="secondary">刷新检查</button><button id="network-check" class="secondary">检查服务连接</button></div><p id="network-result" class="help" role="status">只检查 DNS、TCP 与 TLS，不发送 HTTP 请求，不扣费。</p><h3>封面</h3><label class="check"><input type="checkbox" id="skip-cover-setting">启动后直接进入创作室</label><button class="secondary" id="replay-cover">查看动态封面</button></dialog>
-<dialog id="edit-dialog"><header><h2>重命名</h2><button class="close" aria-label="关闭重命名" data-close="edit-dialog">×</button></header><form id="rename-form"><label for="rename-title">音乐名称</label><input id="rename-title" maxlength="50" required><div class="dialog-actions"><button class="gold">保存名称</button></div></form></dialog>
-<dialog id="delete-dialog"><header><h2>永久删除作品？</h2><button class="close" aria-label="关闭删除确认" data-close="delete-dialog">×</button></header><p id="delete-copy"></p><p class="help">本地整曲、分轨和 MIDI 文件将一并清理，无法撤销。调用记录仍保留。</p><div class="dialog-actions"><button class="secondary" data-close="delete-dialog">取消</button><button id="confirm-delete" class="danger">永久删除</button></div></dialog>
-<dialog id="queue-dialog"><header><h2>播放队列</h2><button class="close" aria-label="关闭播放队列" data-close="queue-dialog">×</button></header><div id="queue-list"></div></dialog>
-<dialog id="listening-dialog"><header><h2>对比与试听笔记</h2><button class="close" aria-label="关闭试听工具" data-close="listening-dialog">×</button></header>
-<p id="listen-current">先播放一条音轨</p><div class="listen-transport"><button id="listen-play" class="secondary">播放</button><span id="listen-time">0:00</span><input id="listen-seek" type="range" min="0" max="1000" value="0" aria-label="试听进度"></div>
-<h3>同位置对比</h3><p class="help">切换时保留播放秒数；不同版本的编排不一定对齐。</p>
-<div class="compare-row"><label for="compare-a">A</label><select id="compare-a"></select><button id="switch-a" class="secondary" aria-pressed="false">试听 A</button></div>
-<div class="compare-row"><label for="compare-b">B</label><select id="compare-b"></select><button id="switch-b" class="secondary" aria-pressed="false">试听 B</button></div>
-<h3>片段循环</h3><div class="loop-fields"><label>开始（秒）<input id="loop-start" type="number" min="0" step="0.01" value="0"></label><button id="loop-start-now" class="quiet">取当前起点</button><label>结束（秒）<input id="loop-end" type="number" min="0" step="0.01"></label><button id="loop-end-now" class="quiet">取当前终点</button></div><button id="loop-toggle" class="secondary" aria-pressed="false">启用 / 关闭循环</button><p id="loop-message" class="help" role="status"></p>
-<h3>当前音轨备注</h3><label for="note-text">记下当前播放位置</label><textarea id="note-text" maxlength="500" rows="2" placeholder="例如：这里的人声残留需要处理"></textarea><button id="note-save" class="secondary">保存时间点备注</button><div id="listening-notes"></div></dialog>
-<div id="toast" role="status" hidden><span></span><button id="undo" hidden>撤销</button></div><script>
-// This small gate can be served by older backends that do not know the new modules.
-(async function(){
-  try {
-    const response=await fetch('/audio/config',{cache:'no-store'});
-    if(!response.ok)throw Error('服务未连接，请确认本地服务仍在运行。');
-    const config=await response.json();
-    if(!(config.ui_version>=5))throw Error('新版界面需要重启服务：在原终端按 Ctrl+C，运行 ./start.command，再刷新页面。');
-    await import('/audio/ui/studio.js');
-  } catch(error) {
-    document.getElementById('service-open').textContent='需要检查服务';
-    document.getElementById('service-error').textContent=error.message;
-    document.getElementById('connection-error').textContent=error.message;
-  }
-})();
-</script></body></html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>BeatMate — 创作室</title>
+    <link rel="stylesheet" href="/audio/ui/studio.css" />
+  </head>
+  <body>
+    <section id="entrance" aria-label="BeatMate 封面" hidden>
+      <div class="cover-art" aria-hidden="true">
+        <img src="/audio/ui/cover.png" alt="" />
+        <div class="studio-light"></div>
+      </div>
+      <div class="cover-shade"></div>
+      <header>
+        <span class="brand"
+          >BeatMate
+          <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></span
+        ><button id="skip-cover" class="quiet">直接进入 <span aria-hidden="true">↗</span></button>
+      </header>
+      <div class="cover-copy">
+        <h1>BeatMate</h1>
+        <p>把灵感，做成你的 Beat。</p>
+        <button id="enter" class="gold">进入创作室 <span aria-hidden="true">▶</span></button
+        ><label class="check"><input type="checkbox" id="skip-next" />下次直接进入</label>
+      </div>
+      <footer>用 AI 创作 Hip-hop 伴奏，为你的说唱留出空间。</footer>
+    </section>
+    <div id="app" class="app" data-view="studio">
+      <aside class="sidebar">
+        <button class="brand" id="brand-cover" title="查看动态封面">
+          BeatMate <span class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        </button>
+        <nav aria-label="主导航">
+          <button aria-label="创作室" data-view="studio" class="active">
+            <span data-icon="pen"></span><span>创作室</span></button
+          ><button aria-label="我的音乐" data-view="music">
+            <span data-icon="music"></span><span>我的音乐</span></button
+          ><button aria-label="收藏" data-view="favorites">
+            <span data-icon="heart"></span><span>收藏</span></button
+          ><button aria-label="回收站" data-view="trash">
+            <span data-icon="trash"></span><span>回收站</span>
+          </button>
+        </nav>
+        <div class="sidebar-bottom">
+          <p>你的下一首，<br />从这里开始。</p>
+          <button id="settings-open" aria-label="设置">
+            <span data-icon="settings"></span><span>设置</span>
+          </button>
+        </div>
+      </aside>
+      <section class="composer" aria-labelledby="composer-title">
+        <div class="composer-top">
+          <div>
+            <h2 id="composer-title">创作室</h2>
+            <p class="composer-note">让你的故事，有自己的节奏。</p>
+          </div>
+          <button id="service-open" class="service-pill">连接中…</button>
+        </div>
+        <form id="form">
+          <div class="form-content">
+            <div class="mode-switch" role="group" aria-label="创作方式">
+              <button type="button" data-mode="instrumental" aria-pressed="true">纯伴奏</button
+              ><button type="button" data-mode="song_stems" aria-pressed="false">歌词歌曲</button>
+            </div>
+            <p id="mode-help" class="help"></p>
+            <label for="title">音乐名称 <small>选填</small></label
+            ><input id="title" maxlength="50" placeholder="给这段声音起个名字" />
+            <div class="counter" id="title-count">0 / 50</div>
+            <div id="lyrics-field" hidden>
+              <label for="lyrics">歌词</label
+              ><textarea
+                id="lyrics"
+                rows="8"
+                placeholder="[主歌]&#10;凌晨两点半，手机亮了又暗&#10;没说出口的话，留在空白的对话框&#10;&#10;[副歌]&#10;……"
+              ></textarea>
+              <div class="counter" id="lyrics-count">0 / 5000</div>
+            </div>
+            <label for="raw" id="raw-label">音乐描述</label
+            ><textarea
+              id="raw"
+              rows="7"
+              required
+              placeholder="描述一种情绪、一段场景。&#10;例如：克制的 emo hip-hop，木吉他、稀疏钢琴与温暖的808，为旋律 Rap 留出空间。"
+            ></textarea>
+            <div class="counter" id="raw-count">0 / 1024</div>
+            <details class="preferences">
+              <summary>更多制作偏好</summary>
+              <div id="options"></div>
+              <label for="project">保存到项目</label
+              ><select id="project">
+                <option value="">新项目</option>
+              </select>
+            </details>
+            <div id="count-field" hidden>
+              <label for="count">生成版本数</label
+              ><select id="count">
+                <option value="1">1 个版本</option>
+              </select>
+            </div>
+            <p id="single-version" class="help single-version">每次请求 1 个版本</p>
+            <p id="service-error" class="error" role="status"></p>
+          </div>
+          <div class="create-footer">
+            <button id="preview-action" type="submit" class="gold" disabled>预览创作</button>
+            <p class="help">预览免费，确认后才提交生成请求。</p>
+            <p id="form-error" class="error" role="status"></p>
+            <button id="retry-pending" type="button" class="secondary" hidden>恢复上次提交</button>
+          </div>
+        </form>
+      </section>
+      <main class="library" id="library">
+        <header class="library-top">
+          <div>
+            <h2 id="library-title">我的音乐</h2>
+            <span id="work-count" class="muted"></span>
+          </div>
+          <label class="search"
+            ><span data-icon="search"></span
+            ><input id="search" placeholder="搜索歌名" aria-label="搜索歌名"
+          /></label>
+        </header>
+        <div class="library-tools">
+          <div class="filters" role="group" aria-label="筛选音乐">
+            <button data-filter="all" aria-pressed="true">全部</button
+            ><button data-filter="favorites" aria-pressed="false">收藏</button
+            ><button data-filter="mock" aria-pressed="false">测试</button>
+          </div>
+          <select id="sort" aria-label="排序">
+            <option value="newest">最近创建</option>
+            <option value="oldest">最早创建</option>
+            <option value="title">按名称</option></select
+          ><button id="batch-toggle" class="quiet">选择</button>
+        </div>
+        <div id="batch-bar" hidden>
+          <label class="check"><input type="checkbox" id="select-all" />全选当前页</label
+          ><span id="selection-count"></span
+          ><button id="batch-action" class="secondary">删除所选</button
+          ><button id="empty-trash" class="danger" hidden>永久删除本页作品</button>
+        </div>
+        <p id="connection-error" class="error" role="status"></p>
+        <p id="library-hint" class="help" hidden></p>
+        <section id="task-region" class="task-region" aria-label="任务动态" hidden></section>
+        <div id="task-pagination" class="pagination" hidden>
+          <button id="task-previous" class="secondary">上一页任务</button
+          ><span id="task-page-status" role="status"></span
+          ><button id="task-next" class="secondary">下一页任务</button>
+        </div>
+        <div class="list-head"><span>音乐作品</span><span>时长 / 操作</span></div>
+        <div id="works"></div>
+        <div id="pagination" class="pagination" aria-label="曲库分页" hidden>
+          <button id="page-previous" class="secondary">上一页</button
+          ><span id="page-status" role="status"></span
+          ><button id="page-next" class="secondary">下一页</button>
+        </div>
+        <div id="empty" class="empty" hidden>
+          <div class="empty-record" aria-hidden="true"></div>
+          <h3>下一首，从这里开始。</h3>
+          <p>写下一个场景、一种情绪，留下属于你的声音。</p>
+        </div>
+      </main>
+      <footer id="player" class="player" aria-label="音乐播放器">
+        <div class="now-playing">
+          <div id="player-art" class="art small" aria-hidden="true"></div>
+          <div>
+            <strong id="player-title">还没有播放音乐</strong
+            ><span id="player-role">选择一首，开始试听。</span>
+          </div>
+        </div>
+        <div class="player-center">
+          <div class="transport">
+            <button id="previous" aria-label="上一首" disabled data-icon="previous"></button
+            ><button
+              id="play"
+              class="play-main"
+              aria-label="播放"
+              disabled
+              data-icon="play"
+            ></button
+            ><button id="next" aria-label="下一首" disabled data-icon="next"></button>
+          </div>
+          <div class="timeline">
+            <span id="elapsed">0:00</span
+            ><input
+              id="seek"
+              aria-label="播放进度"
+              type="range"
+              min="0"
+              max="1000"
+              value="0"
+              disabled
+            /><span id="duration">0:00</span>
+          </div>
+        </div>
+        <div class="player-end">
+          <button id="listening-open" class="quiet">对比 / 备注</button
+          ><span data-icon="volume"></span
+          ><input
+            id="volume"
+            aria-label="音量"
+            type="range"
+            min="0"
+            max="1"
+            step="0.01"
+            value="0.8"
+          /><button id="queue-open" aria-label="播放队列" data-icon="queue"></button>
+        </div>
+        <audio id="audio" preload="none"></audio>
+      </footer>
+    </div>
+    <dialog id="preview-dialog">
+      <header>
+        <h2>确认创作</h2>
+        <button class="close" aria-label="关闭预览" data-close="preview-dialog">×</button>
+      </header>
+      <h3 id="preview-title"></h3>
+      <p class="help">音乐描述原文</p>
+      <pre id="preview-prompt"></pre>
+      <div id="preview-lyrics-wrap" hidden>
+        <p class="help">歌词原文 · 独立提交</p>
+        <pre id="preview-lyrics"></pre>
+      </div>
+      <p id="preview-warnings" class="help"></p>
+      <p id="generation-info"></p>
+      <p id="generate-reason" class="error"></p>
+      <div class="dialog-actions">
+        <button class="secondary" data-close="preview-dialog">返回编辑</button
+        ><button id="generate" class="gold">确认生成</button>
+      </div>
+    </dialog>
+    <dialog id="settings-dialog">
+      <header>
+        <h2>设置</h2>
+        <button class="close" aria-label="关闭设置" data-close="settings-dialog">×</button>
+      </header>
+      <h3>音乐服务</h3>
+      <p id="provider-info"></p>
+      <p id="config-error" class="error"></p>
+      <p class="help">服务与 API Key 由本机 .env 配置加载。</p>
+      <h3>调用额度</h3>
+      <p id="budget-status" class="help"></p>
+      <label for="budget-limit">累计请求上限</label>
+      <div class="inline">
+        <input id="budget-limit" type="number" min="1" step="1" /><button
+          id="save-budget"
+          class="secondary"
+        >
+          保存
+        </button>
+      </div>
+      <p class="help">包含已预留的分离调用；删除作品不会重置计数。这不是供应商余额。</p>
+      <p id="budget-message" role="status"></p>
+      <h3>运行检查</h3>
+      <p id="restart-notice" class="error" hidden>
+        代码或配置已更新。请在原终端按 Ctrl+C，运行 ./start.command，再刷新页面。
+      </p>
+      <div id="health-checks"></div>
+      <details>
+        <summary>运行位置与版本</summary>
+        <pre id="runtime-info"></pre>
+      </details>
+      <div class="health-actions">
+        <button id="health-refresh" class="secondary">刷新检查</button
+        ><button id="network-check" class="secondary">检查服务连接</button>
+      </div>
+      <p id="network-result" class="help" role="status">
+        只检查 DNS、TCP 与 TLS，不发送 HTTP 请求，不扣费。
+      </p>
+      <h3>封面</h3>
+      <label class="check"
+        ><input type="checkbox" id="skip-cover-setting" />启动后直接进入创作室</label
+      ><button class="secondary" id="replay-cover">查看动态封面</button>
+    </dialog>
+    <dialog id="edit-dialog">
+      <header>
+        <h2>重命名</h2>
+        <button class="close" aria-label="关闭重命名" data-close="edit-dialog">×</button>
+      </header>
+      <form id="rename-form">
+        <label for="rename-title">音乐名称</label
+        ><input id="rename-title" maxlength="50" required />
+        <div class="dialog-actions"><button class="gold">保存名称</button></div>
+      </form>
+    </dialog>
+    <dialog id="delete-dialog">
+      <header>
+        <h2>永久删除作品？</h2>
+        <button class="close" aria-label="关闭删除确认" data-close="delete-dialog">×</button>
+      </header>
+      <p id="delete-copy"></p>
+      <p class="help">本地整曲、分轨和 MIDI 文件将一并清理，无法撤销。调用记录仍保留。</p>
+      <div class="dialog-actions">
+        <button class="secondary" data-close="delete-dialog">取消</button
+        ><button id="confirm-delete" class="danger">永久删除</button>
+      </div>
+    </dialog>
+    <dialog id="queue-dialog">
+      <header>
+        <h2>播放队列</h2>
+        <button class="close" aria-label="关闭播放队列" data-close="queue-dialog">×</button>
+      </header>
+      <div id="queue-list"></div>
+    </dialog>
+    <dialog id="listening-dialog">
+      <header>
+        <h2>对比与试听笔记</h2>
+        <button class="close" aria-label="关闭试听工具" data-close="listening-dialog">×</button>
+      </header>
+      <p id="listen-current">先播放一条音轨</p>
+      <div class="listen-transport">
+        <button id="listen-play" class="secondary">播放</button><span id="listen-time">0:00</span
+        ><input id="listen-seek" type="range" min="0" max="1000" value="0" aria-label="试听进度" />
+      </div>
+      <h3>同位置对比</h3>
+      <p class="help">切换时保留播放秒数；不同版本的编排不一定对齐。</p>
+      <div class="compare-row">
+        <label for="compare-a">A</label
+        ><select id="compare-a"></select
+        ><button id="switch-a" class="secondary" aria-pressed="false">试听 A</button>
+      </div>
+      <div class="compare-row">
+        <label for="compare-b">B</label
+        ><select id="compare-b"></select
+        ><button id="switch-b" class="secondary" aria-pressed="false">试听 B</button>
+      </div>
+      <h3>片段循环</h3>
+      <div class="loop-fields">
+        <label
+          >开始（秒）<input id="loop-start" type="number" min="0" step="0.01" value="0" /></label
+        ><button id="loop-start-now" class="quiet">取当前起点</button
+        ><label>结束（秒）<input id="loop-end" type="number" min="0" step="0.01" /></label
+        ><button id="loop-end-now" class="quiet">取当前终点</button>
+      </div>
+      <button id="loop-toggle" class="secondary" aria-pressed="false">启用 / 关闭循环</button>
+      <p id="loop-message" class="help" role="status"></p>
+      <h3>当前音轨备注</h3>
+      <label for="note-text">记下当前播放位置</label
+      ><textarea
+        id="note-text"
+        maxlength="500"
+        rows="2"
+        placeholder="例如：这里的人声残留需要处理"
+      ></textarea
+      ><button id="note-save" class="secondary">保存时间点备注</button>
+      <div id="listening-notes"></div>
+    </dialog>
+    <div id="toast" role="status" hidden><span></span><button id="undo" hidden>撤销</button></div>
+    <script>
+      // This small gate can be served by older backends that do not know the new modules.
+      (async function () {
+        try {
+          const response = await fetch('/audio/config', { cache: 'no-store' });
+          if (!response.ok) throw Error('服务未连接，请确认本地服务仍在运行。');
+          const config = await response.json();
+          if (!(config.ui_version >= 5))
+            throw Error(
+              '新版界面需要重启服务：在原终端按 Ctrl+C，运行 ./start.command，再刷新页面。',
+            );
+          await import('/audio/ui/studio.js');
+        } catch (error) {
+          document.getElementById('service-open').textContent = '需要检查服务';
+          document.getElementById('service-error').textContent = error.message;
+          document.getElementById('connection-error').textContent = error.message;
+        }
+      })();
+    </script>
+  </body>
+</html>

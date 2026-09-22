@@ -26,7 +26,7 @@ BEATMATE_AUDIO_PROVIDER=mock .venv/bin/python -m beatmate audio-serve --audio-di
 node --test tests/ui/*.mjs
 ```
 
-并检查修改过的模块，例如 `node --check beatmate/ui/studio.js`。GitHub Actions 对 Python 3.10 / 3.12、Ubuntu / macOS 配置离线回归，并检查前端模块。首次远程执行结果以仓库的 Actions 页面为准。
+并检查修改过的模块，例如 `node --check beatmate/ui/studio.js`。GitHub Actions 对 Python 3.10 / 3.12、Ubuntu / macOS 配置离线回归，并检查前端模块。各次远程执行结果见仓库的 Actions 页面。
 
 浏览器回归另需安装测试依赖与 Chromium（仅开发和 CI 使用，日常运行无需 Node）：
 
@@ -55,3 +55,18 @@ npm test
 描述触发步骤、期望结果、实际结果、系统/Python 版本和是否使用 Mock。网络问题提供设置中的失败步骤；不要附 `.env`、API Key、个人曲库或未经清理的日志。
 
 PR 说明具体问题、改变后的行为以及实际完成的验证。没有验证的真实服务、听感或 DAW 表现应明确列出，不用离线测试结果代替。
+
+## 源码格式
+
+Python 使用 Ruff，前端使用 Prettier。两者都是开发依赖，不增加产品运行依赖。
+
+```bash
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/ruff format beatmate tests
+npm ci --ignore-scripts --prefix tests/browser
+npm run format --prefix tests/browser
+```
+
+提交前以 `ruff format --check beatmate tests` 和 `npm run format:check --prefix tests/browser` 检查。配置和版本已固定，避免手工压缩源码。
+
+真实音频案例在 `examples/showcase/`，旧规则引擎示例在 `examples/legacy-midi/`。新增案例应核对音频来源、编码和使用授权，不提交整个本地曲库或原始任务数据库。

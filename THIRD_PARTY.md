@@ -1,36 +1,28 @@
-# 来源、固定版本与许可证
+# 第三方依赖与素材来源
 
-第二次创作增量没有新增依赖或借用外部编曲代码。`generator_v2.py` 的音阶规则、短动机及其变化为本项目编写；没有按艺人名称索引歌曲模板，也没有导入录音、歌词或采样。既有固定依赖和许可证保持如下。
+项目代码使用 [MIT 许可证](LICENSE)。第三方组件保留各自许可证；服务和生成内容的使用条件独立于项目代码许可。
 
-本项目的规则、工程状态、编辑校验、HTTP/CLI、测试和参考合成器为本次独立编写；没有复制其他 Beat 网站界面、重命名开源项目或移植开源鼓型代码。无第三方采样、预训练权重、SoundFont 或音乐素材。
+## 依赖
 
-| 项目 | 固定版本 | 来源 | 许可证 | 用法 |
-|---|---|---|---|---|
-| Mido | 1.3.3 | https://pypi.org/project/mido/1.3.3/ ; https://github.com/mido/mido/tree/1.3.3 | MIT | MIDI Type1 编解码；通过依赖调用，未复制源码 |
-| packaging | 24.2 | https://pypi.org/project/packaging/24.2/ ; https://github.com/pypa/packaging/tree/24.2 | Apache-2.0 OR BSD-2-Clause | Mido 的传递依赖，显式锁定 |
-| setuptools（可选安装构建） | 75.6.0 | https://pypi.org/project/setuptools/75.6.0/ | MIT | pyproject 构建依赖；直接 python -m 运行无需安装该版本 |
+| 组件 | 固定版本 | 用途 | 许可证与来源 |
+| --- | --- | --- | --- |
+| Mido | 1.3.3 | MIDI 编解码 | MIT；[PyPI](https://pypi.org/project/mido/1.3.3/) |
+| packaging | 24.2 | Mido 的依赖 | Apache-2.0 OR BSD-2-Clause；[PyPI](https://pypi.org/project/packaging/24.2/) |
+| setuptools | 75.6.0 | 可选包构建 | MIT；[PyPI](https://pypi.org/project/setuptools/75.6.0/) |
+| Playwright / playwright-core | 1.62.1 | 浏览器回归，仅开发 | Apache-2.0；[npm](https://www.npmjs.com/package/playwright/v/1.62.1) |
+| fsevents | 2.3.2 | Playwright 的 macOS 可选依赖 | MIT；[npm](https://www.npmjs.com/package/fsevents/v/2.3.2) |
+| Prettier | 3.6.2 | 前端源码格式，仅开发 | MIT；[npm](https://www.npmjs.com/package/prettier/v/3.6.2) |
+| Ruff | 0.13.2 | Python 格式，仅开发 | MIT；[PyPI](https://pypi.org/project/ruff/0.13.2/) |
 
-已从实际安装的发行包保留 Mido 与 packaging 原始许可证到 `docs/licenses/`。运行依赖在 requirements.txt 和 pyproject.toml 中精确固定。若将来借鉴新项目的代码/模板，必须逐项新增：源 URL、tag/commit、许可证、使用文件范围、修改说明；不得仅记录项目名。
+运行依赖固定在 `requirements.txt`，开发依赖固定在 `requirements-dev.txt` 和 `tests/browser/package-lock.json`。Mido / packaging 的许可证副本在 [docs/licenses](docs/licenses)。浏览器二进制由 Playwright 安装器获取，不随仓库分发。
 
-接口参考（参考行为，不复制示例代码）：
-- Mido MIDI 文件文档：https://mido.readthedocs.io/en/stable/files/midi.html 。代码依赖固定1.3.3；文档非随包复制，文档许可 CC-BY-4.0。
-- OpenAI Structured Outputs：https://developers.openai.com/api/docs/guides/structured-outputs 。访问日期2026-09-16；远端接口不能随本地依赖锁定，模型由部署方显式配置，建议使用模型快照。
-- ACE-Step 尚未集成、未复制其代码或模型；接入前另外核实具体代码与权重的版本、来源、许可，不能提前视为同一许可。
+## 服务
 
+- 当前音频产品调用 Mureka API，仓库不包含其模型权重或 SDK。模型、账户权限、计费与生成内容使用条件由供应商服务条款决定。
+- 原生 MIDI 实验的可选 Planner 使用 [DeepSeek Responses API](https://api-docs.deepseek.com/zh-cn/guides/responses_api/) 或 [OpenAI Structured Outputs](https://developers.openai.com/api/docs/guides/structured-outputs)，由 Python 标准库发出请求。音频工作台不需要这两项配置。
 
-## DeepSeek Planner增量
+## 素材
 
-没有引入新第三方代码、SDK或运行依赖。复用本项目已有适配代码，网络使用Python标准库。协议依据为DeepSeek官方Responses API文档（访问2026-09-16）：https://api-docs.deepseek.com/zh-cn/guides/responses_api/ 与 https://api-docs.deepseek.com/ 。没有复制供应商示例代码。
-
-默认模型别名deepseek-flash及Base URL均可配置；模型是远端服务，不能把别名当成固定权重版本，也不声称获得可再分发模型许可。既有Mido/packaging固定版本与许可证不变。
-
-DeepSeek思考模式控制接口补充参考（2026-09-16）：https://api-docs.deepseek.com/zh-cn/guides/thinking_mode/ 。用于显式设置Responses的reasoning.effort=none；无新依赖或复制代码。
-
-
-## 当前音频产品与界面素材
-
-- 浏览器回归使用 `playwright` / `playwright-core` 1.62.1，Apache-2.0；仅在 `tests/browser` 和 CI 安装，未复制其实现。来源：https://www.npmjs.com/package/playwright/v/1.62.1 ，许可证已核对本地同版本发行包的 `LICENSE`。浏览器二进制由 Playwright 安装器另行下载，不随项目分发。macOS 可选传递依赖 `fsevents` 2.3.2 使用 MIT 许可证；全部测试依赖及完整性摘要固定在 `tests/browser/package-lock.json`。
-
-- Mureka 通过远端 API 提供音乐生成与分离；仓库不包含其模型权重或 SDK。账户权限及产物使用条件由使用者的服务协议决定。
-- `beatmate/ui/cover.png` 是使用内置 image_gen 生成的机器人编曲场景，作为产品入口背景。生成方式及提示词见 [封面来源记录](docs/assets/cover-provenance.md)。它不代表 Mureka 生成的音乐效果，也不是工作台截图。
-- 项目代码使用 [MIT 许可证](LICENSE)；第三方依赖仍遵循各自许可。生成音频及 MIDI 的使用条件由相应服务条款决定，不因本项目的代码许可而改变。
+- 机器人封面背景由 image_gen 生成，见 [来源记录](docs/assets/cover-provenance.md)。截图来自实际页面，见 [截图说明](docs/assets/screenshots.md)。
+- [真实作品案例](examples/showcase/README.md) 使用项目维护者指定的 Mureka 生成结果。发布文件为标明编码方式的试听副本，未包含账户凭据或供应商下载地址。提供试听不等于额外授予第三方商用或再分发权利。
+- [旧版 MIDI 示例](examples/legacy-midi/README.md) 由规则引擎和参考合成器生成，不含外部采样、预训练权重或 SoundFont。

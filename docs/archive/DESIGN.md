@@ -56,7 +56,7 @@ A08 音频 Adapter 的结果类型明确为 audio；第一阶段不引入 ACE-St
 Logic 手工验收：将导出 MIDI 导入空白 Logic 工程，核对小节、速度和五条轨，手工指定鼓组/bass/keys，听取局部改动。自动测试不能代替真实 Logic 验收。
 
 
-## 本轮增量：DeepSeek运行时Planner
+## DeepSeek 运行时 Planner
 
 保留schema_version=1、全部BeatSpec/Note/Track/Version字段、五条轨、原生成/导出算法。没有数据库迁移。仅CLI选择Provider；Service默认Mock及显式planner注入保持原样。
 

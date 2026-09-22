@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>BeatMate · 真实作品试听</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family:
+          system-ui,
+          -apple-system,
+          'PingFang SC',
+          sans-serif;
+        background: #202023;
+        color: #ece9e3;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 56px 24px;
+      }
+      a {
+        color: #d6c5a7;
+      }
+      h1 {
+        font-size: clamp(36px, 7vw, 64px);
+        margin: 10px 0 16px;
+        letter-spacing: -2px;
+      }
+      p {
+        line-height: 1.8;
+        color: #bbb3bf;
+      }
+      header {
+        margin-bottom: 40px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+      article {
+        background: #2b2730;
+        border: 1px solid #4e4352;
+        border-radius: 14px;
+        padding: 28px;
+      }
+      h2 {
+        margin: 0 0 6px;
+        font-size: 28px;
+      }
+      label {
+        display: block;
+        margin: 24px 0 8px;
+      }
+      audio {
+        width: 100%;
+      }
+      .meta {
+        font-size: 13px;
+        color: #b9a6bf;
+      }
+      .links {
+        margin-top: 24px;
+      }
+      footer {
+        font-size: 13px;
+        margin-top: 36px;
+        border-top: 1px solid #403c45;
+        padding-top: 20px;
+      }
+      a:focus-visible {
+        outline: 2px solid #d6c5a7;
+        outline-offset: 4px;
+      }
+      @media (max-width: 700px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+        body {
+          padding-top: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="https://github.com/Wang-Zhongke/BeatMate">BeatMate</a>
+      <h1>把灵感，做成你的 Beat。</h1>
+      <p>
+        两首真实 Mureka 作品。听整曲，也听分离后的伴奏和人声。<br />完整时长的 AAC 试听副本，无需
+        Key，不发起生成请求。
+      </p>
+    </header>
+    <main class="grid">
+      <article>
+        <h2>半杯常温</h2>
+        <div class="meta">歌词歌曲 · 3:00 · Mureka 9</div>
+        <p>中文歌词、深夜的生活片段。制作方向是温暖、松弛的 Jazz Hip-hop。</p>
+        <label for="mix">整曲</label
+        ><audio id="mix" controls preload="none" src="half-cup/mix.m4a"></audio>
+        <label for="instrumental">分离伴奏</label
+        ><audio id="instrumental" controls preload="none" src="half-cup/instrumental.m4a"></audio>
+        <label for="vocals">分离人声</label
+        ><audio id="vocals" controls preload="none" src="half-cup/vocals.m4a"></audio>
+        <p class="links">
+          <a href="half-cup/lyrics.txt">歌词</a> · <a href="half-cup/description.txt">制作描述</a> ·
+          <a href="half-cup/manifest.json">文件来源</a>
+        </p>
+      </article>
+      <article>
+        <h2>Jazz Beat</h2>
+        <div class="meta">纯伴奏 · 2:29 · Mureka 9</div>
+        <p>从一段描述开始：爵士钢琴、萨克斯与 Boom Bap 鼓组，为中文说唱留白。</p>
+        <label for="jazz">伴奏</label
+        ><audio id="jazz" controls preload="none" src="jazz-beat/instrumental.m4a"></audio>
+        <p class="links">
+          <a href="jazz-beat/description.txt">制作描述</a> ·
+          <a href="jazz-beat/manifest.json">文件来源</a>
+        </p>
+      </article>
+    </main>
+    <footer>
+      <p>
+        试听文件为 AAC 192 kbps
+        目标码率，未剪辑或重新混音。制作方向来自原始请求，并非音频检测结论。请留意人声残留、分离串音与压缩损失；案例尚未附正式人工评分。<a
+          href="README.md"
+          >更多说明</a
+        >
+      </p>
+    </footer>
+    <script>
+      document.querySelectorAll('audio').forEach((player) =>
+        player.addEventListener('play', () =>
+          document.querySelectorAll('audio').forEach((other) => {
+            if (other !== player) other.pause();
+          }),
+        ),
+      );
+    </script>
+  </body>
+</html>
